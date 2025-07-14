@@ -5,7 +5,7 @@ import photo3 from "@/images/profile-9.jpg";
 import Link from "next/link";
 
 const boxStyles =
-  "h-[15rem] w-[18rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 ";
+  "h-auto w-[18rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 ";
 
 const imageStyles =
   "w-[8rem] h-[8rem] rounded-full mx-auto  object-cover items-center mt-[-4rem]";
@@ -29,18 +29,41 @@ export default function ThirdTestimonialSection() {
         <p>commonly used in graphic design, publishing, and web development.</p>
       </div>
 
-      <div className="px-[2rem] mt-[8rem] flex justify-evenly gap-[1rem]">
-        <div className={`${boxStyles} bg-[#c1121f]`}>
+      <div className="px-[2rem] mt-[8rem] flex justify-evenly gap-[1rem] text-center">
+        <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo1} alt="img" className={imageStyles} />
-          first
+          <h1 className="font-bold mt-[1rem]">Lokendra Chand ThaQuri</h1>
+          <p className="text-[#7f5539]">Founder</p>
+
+          <p className="mx-[2rem] my-[1rem]">
+            Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
+            text commonly used in graphic design, publishing, and web
+            development.
+          </p>
         </div>
-        <div className={`${boxStyles} bg-[#0077b6]`}>
+
+        <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo2} alt="img" className={imageStyles} />
-          second
+          <h1 className="font-bold mt-[1rem]">Aayush Chaudhary</h1>
+          <p className="text-[#7f5539]">Principle</p>
+
+          <p className="mx-[2rem] my-[1rem]">
+            Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
+            text commonly used in graphic design, publishing, and web
+            development.
+          </p>
         </div>
-        <div className={`${boxStyles} bg-[#fb8500]`}>
+
+        <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo3} alt="img" className={imageStyles} />
-          third
+          <h1 className="font-bold mt-[1rem]">Ratna Bohara</h1>
+          <p className="text-[#7f5539]">Vice-Principle</p>
+
+          <p className="mx-[2rem] my-[1rem]">
+            Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
+            text commonly used in graphic design, publishing, and web
+            development.
+          </p>
         </div>
       </div>
 
