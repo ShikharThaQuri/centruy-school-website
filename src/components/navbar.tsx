@@ -1,4 +1,11 @@
+"use client";
+
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
 export default function Navbar() {
+  const pathname = usePathname();
+
   return (
     <nav className="bg-[#faedcd] ">
       <div className="text-center pt-4 px-[3rem] text-white">
@@ -12,16 +19,49 @@ export default function Navbar() {
       </div>
 
       <div className="flex items-center justify-between py-4 px-[3rem] text-black font-bold text-[17px]">
-        <h1>My Navbar</h1>
-        <ul className="flex space-x-5">
+        <h1>LOGO</h1>
+        <ul className="flex gap-[2rem]">
           <li>
-            <a href="/">Home</a>
+            <Link
+              href="/"
+              className={`${pathname === "/" ? "text-[#c1121f]" : ""}`}
+            >
+              Home
+            </Link>
           </li>
           <li>
-            <a href="/about">About</a>
+            <Link
+              href="/About-Us"
+              className={`${pathname === "/About-Us" ? "text-[#c1121f]" : ""}`}
+            >
+              About Us
+            </Link>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <Link
+              href="/School-Gallery"
+              className={`${
+                pathname === "/School-Gallery" ? "text-[#c1121f]" : ""
+              }`}
+            >
+              School Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/Notice"
+              className={`${pathname === "/Notice" ? "text-[#c1121f]" : ""}`}
+            >
+              Notice
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/Feedback"
+              className={`${pathname === "/Feedback" ? "text-[#c1121f]" : ""}`}
+            >
+              Feedback
+            </Link>
           </li>
         </ul>
       </div>

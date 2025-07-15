@@ -23,46 +23,53 @@ export default function ThirdTestimonialSection() {
           WHAT CENTURY SAY
         </h1>
         <p>
-          Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
-          text commonly used in graphic design, publishing, and web development.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
+          est tempus, lobortis sapien id, lobortis metus. Nam et tempus est.
         </p>
-        <p>commonly used in graphic design, publishing, and web development.</p>
+        <p>
+          Donec eleifend sapien quis magna commodo dictum. Curabitur at blandit
+          erat.
+        </p>
       </div>
 
       <div className="px-[2rem] mt-[8rem] flex justify-evenly gap-[1rem] text-center">
         <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo1} alt="img" className={imageStyles} />
-          <h1 className="font-bold mt-[1rem]">Lokendra Chand ThaQuri</h1>
+          <h1 className="font-bold mt-[1rem]  text-[#c1121f]">
+            Lokendra Chand ThaQuri
+          </h1>
           <p className="text-[#7f5539]">Founder</p>
 
           <p className="mx-[2rem] my-[1rem]">
-            Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
-            text commonly used in graphic design, publishing, and web
-            development.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
+            tempus est.
           </p>
         </div>
 
         <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo2} alt="img" className={imageStyles} />
-          <h1 className="font-bold mt-[1rem]">Aayush Chaudhary</h1>
+          <h1 className="font-bold mt-[1rem]  text-[#c1121f]">
+            Aayush Chaudhary
+          </h1>
           <p className="text-[#7f5539]">Principle</p>
 
           <p className="mx-[2rem] my-[1rem]">
-            Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
-            text commonly used in graphic design, publishing, and web
-            development.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
+            tempus est.
           </p>
         </div>
 
         <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo3} alt="img" className={imageStyles} />
-          <h1 className="font-bold mt-[1rem]">Ratna Bohara</h1>
+          <h1 className="font-bold mt-[1rem] text-[#c1121f]">Ratna Bohara</h1>
           <p className="text-[#7f5539]">Vice-Principle</p>
 
           <p className="mx-[2rem] my-[1rem]">
-            Lorem ipsum /ˌlɔ.rəm p.səm/ LOR-əm IP-səm is a dummy or placeholder
-            text commonly used in graphic design, publishing, and web
-            development.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
+            faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
+            tempus est.
           </p>
         </div>
       </div>

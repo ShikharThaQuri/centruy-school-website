@@ -10,7 +10,7 @@ export default function Home() {
       <HeroSection />
       <FirstSection />
 
-      <section className="pt-[6rem] pb-[2rem] ">
+      <section className=" py-[2rem] ">
         <h1 className="text-3xl font-bold text-center mb-6">Gallery</h1>
         <div className="mx-[100px] px-[20px] py-[2rem] bg-[#e9edc9] rounded-lg shadow-md">
           <GallerySection />
