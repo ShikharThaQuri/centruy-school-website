@@ -24,3 +24,12 @@ const UserSchema = new mongoose.Schema(
 const User = mongoose.models.User || mongoose.model("User", UserSchema);
 
 export default User;
+
+export type UserType = {
+  _id: string;
+  username: string;
+  hash: string;
+  salt: string;
+  createdAt: Date;
+  updatedAt: Date;
+};

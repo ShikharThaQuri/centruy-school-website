@@ -3,13 +3,11 @@ import mongoose, { ConnectOptions } from "mongoose";
 interface connectOptions extends ConnectOptions {
   useNewUrlParser: boolean;
   useUnifiedTopology: boolean;
-  useCreateIndex: boolean;
 }
 
 const options: connectOptions = {
   useNewUrlParser: true,
   useUnifiedTopology: true,
-  useCreateIndex: true,
 };
 
 const connectDB = async () => {

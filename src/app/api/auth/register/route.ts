@@ -1,6 +1,6 @@
 import connectDB from "@/db/connect";
 import User from "@/models/Users";
-import { createPassword, verifyPassword } from "@/utils/auth/password";
+import { createPassword } from "@/utils/auth/password";
 
 export async function POST(req: Request) {
   try {
@@ -37,39 +37,7 @@ export async function POST(req: Request) {
     return Response.json(
       {
         success: false,
-        msg: "An error occurred while processing your request.",
-      },
-      { status: 500 }
-    );
-  }
-}
-
-export async function GET(req: Request) {
-  try {
-    await connectDB();
-
-    const body = await req.json();
-
-    const verifyHash = verifyPassword(body.password, body.hash, body.salt);
-
-    if (!verifyHash) {
-      return Response.json({
-        success: false,
-        msg: "Wrong Password.",
-      });
-    }
-
-    const user = await User.find({ username: body.username });
-
-    return Response.json({
-      success: true,
-      data: user,
-    });
-  } catch (error) {
-    return Response.json(
-      {
-        success: false,
-        msg: "An error occurred while fetching users.",
+        msg: "An error occurred while processing request.",
       },
       { status: 500 }
     );
