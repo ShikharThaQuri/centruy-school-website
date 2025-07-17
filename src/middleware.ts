@@ -19,7 +19,7 @@ export default async function middleware(req: NextRequest) {
   const isPublicRoute = publicRoutes.includes(path);
 
   const token = cookie?.value as string;
-  console.log("Token:", token);
+  // console.log("Token:", token);
 
   const decoded = await decrypt(token);
 
