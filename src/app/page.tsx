@@ -3,10 +3,14 @@ import FirstSection from "./homeComponents/firstSection";
 import HeroSection from "./homeComponents/herosection";
 import GallerySection from "./homeComponents/secondGallerySection";
 import ThirdTestimonialSection from "./homeComponents/thirdTestemonialSection";
+import Navbar from "@/components/navbar";
+import Footer from "@/components/footer";
 
 export default function Home() {
   return (
     <div className="bg-[white] text-black">
+      <Navbar />
+
       <HeroSection />
       <FirstSection />
 
@@ -23,6 +27,8 @@ export default function Home() {
       </section>
 
       <ThirdTestimonialSection />
+
+      <Footer />
     </div>
   );
 }
