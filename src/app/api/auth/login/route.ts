@@ -1,6 +1,7 @@
 import connectDB from "@/db/connect";
 import User from "@/models/Users";
 import { verifyPassword } from "@/utils/auth/password";
+import { createSession } from "@/utils/auth/session";
 
 export async function POST(req: Request) {
   try {
@@ -30,11 +31,15 @@ export async function POST(req: Request) {
       });
     }
 
+    const session = await createSession(getUser);
+
     const user = await User.find({ username: body.username });
 
     return Response.json({
       success: true,
+      msg: "User logged in successfully.",
       data: user,
+      session,
     });
   } catch (error) {
     return Response.json(

@@ -1,27 +1,31 @@
 "use client";
 
-// import { loginUser } from "@/services/auth";
-// import { useActionState } from "react";
+import { loginUser } from "@/services/auth";
+import { redirect } from "next/navigation";
+import { useActionState } from "react";
 
 export default function Login() {
-  // const [data, action] = useActionState(loginUser, undefined);
+  const [data, action] = useActionState(loginUser, undefined);
 
-  // if (data?.success == true) {
-  //   redirect("/Admin-Page");
-  // }
+  if (data?.success == true) {
+    redirect("/Dashboard/Home");
+  }
 
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-100">
       <div className="bg-[#403d39] p-8 rounded-lg shadow-md w-96">
         <h2 className="text-2xl font-bold mb-6 text-center">Login</h2>
-        <form>
+        <form action={action}>
           <div className="mb-4">
-            <label className="block text-sm font-medium mb-2" htmlFor="email">
-              Email
+            <label
+              className="block text-sm font-medium mb-2"
+              htmlFor="username"
+            >
+              Username
             </label>
             <input
-              type="email"
-              name="email"
+              type="text"
+              name="username"
               className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-blue-500"
               required
             />
@@ -48,11 +52,11 @@ export default function Login() {
           </button>
         </form>
 
-        {/* {data?.success === false ? (
+        {data?.success === false ? (
           <h1 className="text-[#e63946] text-right">{data?.msg}</h1>
         ) : (
           ""
-        )} */}
+        )}
       </div>
     </div>
   );
