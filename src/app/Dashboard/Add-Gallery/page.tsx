@@ -10,7 +10,7 @@ const labelStyle = "block text-sm font-medium text-gray-700 mb-2";
 
 // const msg = "";
 
-export default function AddNotice() {
+export default function AddGallery() {
   // const [data, action, isPending] = useActionState(addNewProduct, undefined);
 
   // const [msg, setMsg] = useState<string>();
@@ -26,11 +26,13 @@ export default function AddNotice() {
   return (
     <div className="py-[2rem] flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
-        <h1 className="text-2xl font-bold mb-6 text-center">Add Product</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">
+          Add Gallery Details
+        </h1>
 
         <form className="flex flex-col">
           <div className="flex flex-col w-full text-left ">
-            <label className={`${labelStyle}`} htmlFor="Notice Header">
+            <label className={`${labelStyle}`} htmlFor="product name">
               Notice Header
             </label>
             <input

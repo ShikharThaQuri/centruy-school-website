@@ -1,18 +1,18 @@
 import { Suspense } from "react";
 
-export default function TeachersPage() {
+export default function GalleryPage() {
   return (
     <main className="flex flex-col items-center justify-start p-[1rem] min-h-[80vh]">
-      <h1 className="text-center mb-[2rem] font-bold text-xl">Teachers</h1>
+      <h1 className="text-center mb-[2rem] font-bold text-xl">Gallery</h1>
 
       <Suspense fallback={<h1>Loading...</h1>}>
-        <TeacherBox />
+        <GalleryBox />
       </Suspense>
     </main>
   );
 }
 
-async function TeacherBox() {
+async function GalleryBox() {
   // const result = await getProducts();
 
   return (
@@ -22,7 +22,7 @@ async function TeacherBox() {
         // key={i}
         className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
       >
-        <h2>Teacher Name</h2>
+        <h2>Gallery Name</h2>
         <p>edit & delete</p>
       </div>
       {/* ))} */}

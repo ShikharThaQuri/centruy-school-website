@@ -10,7 +10,7 @@ const labelStyle = "block text-sm font-medium text-gray-700 mb-2";
 
 // const msg = "";
 
-export default function AddNotice() {
+export default function AddTeacher() {
   // const [data, action, isPending] = useActionState(addNewProduct, undefined);
 
   // const [msg, setMsg] = useState<string>();
@@ -26,35 +26,50 @@ export default function AddNotice() {
   return (
     <div className="py-[2rem] flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
-        <h1 className="text-2xl font-bold mb-6 text-center">Add Product</h1>
+        <h1 className="text-2xl font-bold mb-6 text-center">Add Teacher</h1>
 
         <form className="flex flex-col">
           <div className="flex flex-col w-full text-left ">
-            <label className={`${labelStyle}`} htmlFor="Notice Header">
-              Notice Header
+            <label className={`${labelStyle}`} htmlFor="Teacher Name">
+              Teacher Name
             </label>
             <input
               type="text"
-              name="Notice Header"
+              name="Teacher Name"
               required
-              placeholder="Enter Notice Header Name"
+              placeholder="Enter Teacher Name Name"
               className={`${inputStyle}`}
             />
           </div>
 
           <div className="flex flex-col w-full text-left ">
-            <label className={`${labelStyle}`} htmlFor="Discription">
-              Discription
+            <label className={`${labelStyle}`} htmlFor="Teacher Quote">
+              Teacher Quote
             </label>
             <input
               type="text"
-              name="dis"
+              name="Quote"
               required
-              placeholder="Enter Notice Discription"
+              placeholder="Enter Notice Teacher Quote"
               className={`${inputStyle}`}
             />
           </div>
 
+          <div className="mb-[3rem] tablet:flex tablet:flex-col tablet:gap-y-[2rem] tablet:items-center">
+            <label className={`${labelStyle}`} htmlFor="Teacher Image">
+              Upload Teacher Image
+            </label>
+            <input
+              type="file"
+              name="file"
+              id="uploadImg"
+              accept="image/*"
+              required
+              className={`border border-gray-300 rounded w-full
+              file:px-3 file:py-2 file:text-[1rem] file:mr-[1rem] file:bg-[#d4a373] file:text-xs file:text-black
+              hover:file:cursor-pointer`}
+            />
+          </div>
           {/* <input
             disabled={isPending}
             type="submit"
