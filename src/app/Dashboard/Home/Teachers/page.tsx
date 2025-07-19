@@ -1,3 +1,5 @@
+import { TeacherType } from "@/models/Teacher";
+import { GetTeachers } from "@/services/admin/teachers";
 import { Suspense } from "react";
 
 export default function TeachersPage() {
@@ -13,19 +15,19 @@ export default function TeachersPage() {
 }
 
 async function TeacherBox() {
-  // const result = await getProducts();
+  const result = await GetTeachers();
 
   return (
     <>
-      {/* {result?.data?.map((items: ProductType, i: number) => ( */}
-      <div
-        // key={i}
-        className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
-      >
-        <h2>Teacher Name</h2>
-        <p>edit & delete</p>
-      </div>
-      {/* ))} */}
+      {result?.data?.map((items: TeacherType, i: number) => (
+        <div
+          key={i}
+          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
+        >
+          <h2>{items.teacherName}</h2>
+          <p>{items._id}</p>
+        </div>
+      ))}
     </>
   );
 }

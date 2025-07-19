@@ -14,3 +14,13 @@ const Teacher =
   mongoose.models.teachers || mongoose.model("teachers", TeacherSchema);
 
 export default Teacher;
+
+export type TeacherType = {
+  _id: String;
+  teacherName: String;
+  teacherQuote: String;
+  teacherRole: String;
+  teacherImage: String;
+  createdAt: Date;
+  updatedAt: Date;
+};

@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const NoticeSchema = new mongoose.Schema(
   {
-    noticeHeader: {
+    noticeHeading: {
       type: String,
       require: true,
     },
@@ -22,3 +22,13 @@ const NoticeSchema = new mongoose.Schema(
 const Notice = mongoose.models.notice || mongoose.model("notice", NoticeSchema);
 
 export default Notice;
+
+export type NoticeType = {
+  _id: String;
+
+  noticeHeading: String;
+  noticeDis: String;
+  pin: Boolean;
+  createdAt: Date;
+  updatedAt: Date;
+};

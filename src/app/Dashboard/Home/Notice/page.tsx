@@ -1,3 +1,5 @@
+import { NoticeType } from "@/models/Notice";
+import { getNotice } from "@/services/admin/notice";
 import { Suspense } from "react";
 
 export default function NoticePage() {
@@ -13,19 +15,19 @@ export default function NoticePage() {
 }
 
 async function NoticeBox() {
-  // const result = await getProducts();
+  const result = await getNotice();
 
   return (
     <>
-      {/* {result?.data?.map((items: ProductType, i: number) => ( */}
-      <div
-        // key={i}
-        className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
-      >
-        <h2>Notice Header Name</h2>
-        <p>edit & delete</p>
-      </div>
-      {/* ))} */}
+      {result?.data?.map((items: NoticeType, i: number) => (
+        <div
+          key={i}
+          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
+        >
+          <h2>{items.noticeHeading}</h2>
+          <p>{items._id}</p>
+        </div>
+      ))}
     </>
   );
 }

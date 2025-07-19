@@ -8,7 +8,7 @@ export async function POST(req: Request) {
     const Body = await req.json();
 
     const newNotice = new Notice({
-      noticeHeader: Body?.noticeHeader,
+      noticeHeading: Body?.noticeHeading,
       noticeDis: Body?.noticeDis,
       pin: Body?.pin,
     });
@@ -18,7 +18,27 @@ export async function POST(req: Request) {
     return Response.json({
       success: true,
       msg: "successfully added a Notice",
-      result,
+      data: result,
+    });
+  } catch (error) {
+    return Response.json({
+      success: false,
+      msg: "something went wrong while adding Notice!!",
+      error,
+    });
+  }
+}
+
+export async function GET(req: Request) {
+  try {
+    await connectDB();
+
+    const result = await Notice.find({});
+
+    return Response.json({
+      success: true,
+      msg: "Successfull in getting Notice",
+      data: result,
     });
   } catch (error) {
     return Response.json({

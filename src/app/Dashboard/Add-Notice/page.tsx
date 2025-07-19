@@ -28,12 +28,12 @@ export default function AddNotice() {
 
         <form action={action} className="flex flex-col">
           <div className="flex flex-col w-full text-left ">
-            <label className={`${labelStyle}`} htmlFor="Notice Header">
-              Notice Header
+            <label className={`${labelStyle}`} htmlFor="Notice Heading">
+              Notice Heading
             </label>
             <input
               type="text"
-              name="Notice Header"
+              name="Notice Heading"
               required
               placeholder="Enter Notice Header Name"
               className={`${inputStyle}`}

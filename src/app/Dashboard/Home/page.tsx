@@ -4,7 +4,7 @@ export default function DashboardHome() {
       <h1 className="text-center text-[1.3rem] font-bold text-[#d00000]">
         Dashboard
       </h1>
-      <p>Welcome to your dashboard!</p>
+      <p>Welcome to The dashboard!</p>
     </div>
   );
 }

@@ -1,5 +1,7 @@
 "use server";
 
+import { revalidateTag } from "next/cache";
+
 export async function AddNewTeacher(
   previousState: unknown,
   formData: FormData
@@ -19,6 +21,31 @@ export async function AddNewTeacher(
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/teacher`, {
       method: "POST",
       body: Data,
+    });
+
+    const data = await res.json();
+
+    if (data?.success) {
+      revalidateTag("getAllTeachers");
+    }
+
+    return data;
+  } catch (error) {
+    const data = {
+      sussess: false,
+      msg: "somting went wrong while Faching Data!",
+      error,
+    };
+    return data;
+  }
+}
+
+export async function GetTeachers() {
+  try {
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/teacher`, {
+      method: "GET",
+      cache: "force-cache",
+      next: { tags: ["getAllTeachers"] },
     });
 
     const data = await res.json();
