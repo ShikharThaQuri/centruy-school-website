@@ -38,7 +38,7 @@ export async function decrypt(token: string) {
 
     return payload;
   } catch (error) {
-    console.log(error);
+    console.log("hello", error);
     return null;
   }
 }

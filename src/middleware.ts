@@ -18,17 +18,24 @@ export default async function middleware(req: NextRequest) {
   const isProtectedRoute = portectedRoutes.includes(path);
   const isPublicRoute = publicRoutes.includes(path);
 
-  const token = cookie?.value as string;
-  // console.log("Token:", token);
+  const token = (cookie?.value as string) || "";
 
-  const decoded = await decrypt(token);
+  if (token) {
+    const decoded = await decrypt(token);
 
-  if (isProtectedRoute && !decoded) {
-    return NextResponse.redirect(new URL("/Login", req.url));
-  }
+    if (isProtectedRoute && !decoded) {
+      return NextResponse.redirect(new URL("/Login", req.url));
+    }
 
-  if (isPublicRoute && decoded) {
-    return NextResponse.redirect(new URL("/Dashboard/Home", req.url));
+    if (isPublicRoute && decoded) {
+      return NextResponse.redirect(new URL("/Dashboard/Home", req.url));
+    }
+  } else {
+    const decoded = null;
+
+    if (isProtectedRoute && !decoded) {
+      return NextResponse.redirect(new URL("/Login", req.url));
+    }
   }
 
   return NextResponse.next();
