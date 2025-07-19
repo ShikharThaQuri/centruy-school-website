@@ -1,6 +1,7 @@
 import { TeacherType } from "@/models/Teacher";
 import { GetTeachers } from "@/services/admin/teachers";
 import { Suspense } from "react";
+import { TeacherIcons } from "./teacherIcons";
 
 export default function TeachersPage() {
   return (
@@ -25,7 +26,8 @@ async function TeacherBox() {
           className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
         >
           <h2>{items.teacherName}</h2>
-          <p>{items._id}</p>
+
+          <TeacherIcons />
         </div>
       ))}
     </>
