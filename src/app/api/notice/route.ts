@@ -7,10 +7,15 @@ export async function POST(req: Request) {
 
     const Body = await req.json();
 
+    const date = new Date();
+    const sliceDate = date.toString().substring(0, 16);
+
     const newNotice = new Notice({
       noticeHeading: Body?.noticeHeading,
       noticeDis: Body?.noticeDis,
       pin: Body?.pin,
+      sliceDate: sliceDate,
+      hero: "hero",
     });
 
     const result = await newNotice.save();

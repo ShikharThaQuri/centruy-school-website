@@ -15,6 +15,14 @@ const NoticeSchema = new mongoose.Schema(
     pin: {
       type: Boolean,
     },
+
+    sliceDate: {
+      type: String,
+    },
+
+    hero: {
+      type: String,
+    },
   },
   { timestamps: true }
 );
@@ -28,6 +36,7 @@ export type NoticeType = {
   noticeHeading: String;
   noticeDis: String;
   pin: Boolean;
+  sliceDate: String;
   createdAt: Date;
   updatedAt: Date;
 };
