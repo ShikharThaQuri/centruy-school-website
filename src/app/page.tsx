@@ -20,7 +20,10 @@ export default function Home() {
           <GallerySection />
         </div>
         <div className="text-center my-[3rem]">
-          <Link className="px-[1rem] py-[0.8rem] bg-[#48cae4]" href="/Gallery">
+          <Link
+            className="px-[1rem] py-[0.8rem] bg-[#48cae4]"
+            href="/School-Gallery"
+          >
             View More
           </Link>
         </div>
