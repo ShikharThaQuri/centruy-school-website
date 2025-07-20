@@ -17,12 +17,12 @@ const Teacher =
 export default Teacher;
 
 export type TeacherType = {
-  _id: String;
-  teacherName: String;
-  teacherQuote: String;
-  teacherRole: String;
-  public_id: String;
-  image_Url: String;
+  _id: string;
+  teacherName: string;
+  teacherQuote: string;
+  teacherRole: string;
+  public_id: string;
+  image_Url: string;
   createdAt: Date;
   updatedAt: Date;
 };

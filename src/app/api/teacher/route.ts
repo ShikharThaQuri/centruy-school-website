@@ -1,5 +1,6 @@
 import connectDB from "@/db/connect";
 import Teacher from "@/models/Teacher";
+import { deleteImage } from "@/utils/cloudneary/deleteImage";
 import { UploadImage } from "@/utils/cloudneary/upload_image";
 
 export async function POST(req: Request) {
@@ -53,6 +54,29 @@ export async function GET(req: Request) {
       success: true,
       msg: "Successfull in getting Teacher",
       data: result,
+    });
+  } catch (error) {
+    return Response.json({
+      success: false,
+      msg: "Something went wrong while Getting Teachers!",
+      error,
+    });
+  }
+}
+
+export async function DELETE(req: Request) {
+  try {
+    await connectDB();
+
+    const body = await req.json();
+
+    const result = await Teacher.findByIdAndDelete({ _id: body?._id });
+    await deleteImage(body?.publicId);
+
+    return Response.json({
+      success: true,
+      msg: "successfully delete a Teacher",
+      result,
     });
   } catch (error) {
     return Response.json({

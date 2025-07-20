@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidateTag } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export async function AddNewTeacher(
   previousState: unknown,
@@ -49,6 +49,34 @@ export async function GetTeachers() {
     });
 
     const data = await res.json();
+
+    return data;
+  } catch (error) {
+    const data = {
+      sussess: false,
+      msg: "somting went wrong while Faching Data!",
+      error,
+    };
+    return data;
+  }
+}
+
+export async function deleteTeacher(id: string, publicId: string) {
+  try {
+    const bodyData = {
+      _id: id,
+      publicId: publicId,
+    };
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/teacher`, {
+      method: "DELETE",
+      body: JSON.stringify(bodyData),
+    });
+
+    const data = await res.json();
+    if (data?.success === true) {
+      revalidatePath("/Dashboard/Home/Teachers");
+    }
 
     return data;
   } catch (error) {

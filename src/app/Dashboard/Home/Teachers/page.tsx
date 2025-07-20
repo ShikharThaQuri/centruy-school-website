@@ -27,7 +27,7 @@ async function TeacherBox() {
         >
           <h2>{items.teacherName}</h2>
 
-          <TeacherIcons />
+          <TeacherIcons id={items._id} publicId={items.public_id} />
         </div>
       ))}
     </>
