@@ -27,7 +27,7 @@ async function NoticeBox() {
         >
           <h2>{items.noticeHeading}</h2>
 
-          <NoticeIcons />
+          <NoticeIcons id={items._id} />
         </div>
       ))}
     </>

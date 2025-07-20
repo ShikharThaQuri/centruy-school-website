@@ -1,6 +1,6 @@
 "use server";
 
-import { revalidateTag } from "next/cache";
+import { revalidatePath, revalidateTag } from "next/cache";
 
 export async function AddNewNotice(previousState: unknown, formdata: FormData) {
   try {
@@ -42,6 +42,35 @@ export async function getNotice() {
     });
 
     const data = await res.json();
+    return data;
+  } catch (error) {
+    const data = {
+      susscess: false,
+      msg: "Something went wrong while Fetching!!",
+      error,
+    };
+
+    return data;
+  }
+}
+
+export async function deleteNotice(id: String) {
+  try {
+    const bodydata = {
+      _id: id,
+    };
+
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/notice`, {
+      method: "DELETE",
+      body: JSON.stringify(bodydata),
+    });
+
+    const data = await res.json();
+
+    if (data?.success === true) {
+      revalidatePath("/Dashboard/Home/Notice");
+    }
+
     return data;
   } catch (error) {
     const data = {

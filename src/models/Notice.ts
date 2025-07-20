@@ -25,7 +25,6 @@ export default Notice;
 
 export type NoticeType = {
   _id: String;
-
   noticeHeading: String;
   noticeDis: String;
   pin: Boolean;

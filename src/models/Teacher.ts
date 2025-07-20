@@ -5,7 +5,8 @@ const TeacherSchema = new mongoose.Schema(
     teacherName: { type: String, require: true },
     teacherQuote: { type: String },
     teacherRole: { type: String, require: true },
-    teacherImage: { type: String },
+    public_id: { type: String },
+    image_Url: { type: String },
   },
   { timestamps: true }
 );
@@ -20,7 +21,8 @@ export type TeacherType = {
   teacherName: String;
   teacherQuote: String;
   teacherRole: String;
-  teacherImage: String;
+  public_id: String;
+  image_Url: String;
   createdAt: Date;
   updatedAt: Date;
 };

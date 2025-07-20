@@ -44,8 +44,8 @@ export default function AddTeacher() {
             <label className={`${labelStyle}`} htmlFor="Teacher Quote">
               Teacher Quote
             </label>
-            <input
-              type="text"
+            <textarea
+              rows={4}
               name="Quote"
               required
               placeholder="Enter Notice Teacher Quote"

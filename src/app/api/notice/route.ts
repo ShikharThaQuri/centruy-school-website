@@ -48,3 +48,25 @@ export async function GET(req: Request) {
     });
   }
 }
+
+export async function DELETE(req: Request) {
+  try {
+    await connectDB();
+
+    const body = await req.json();
+
+    const result = await Notice.findByIdAndDelete({ _id: body._id });
+
+    return Response.json({
+      success: true,
+      msg: "Successfully delete a Notice.",
+      result,
+    });
+  } catch (error) {
+    return Response.json({
+      success: false,
+      msg: "something went wrong while deleting Notice!!",
+      error,
+    });
+  }
+}

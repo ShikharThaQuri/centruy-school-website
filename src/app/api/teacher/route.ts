@@ -1,5 +1,6 @@
 import connectDB from "@/db/connect";
 import Teacher from "@/models/Teacher";
+import { UploadImage } from "@/utils/cloudneary/upload_image";
 
 export async function POST(req: Request) {
   try {
@@ -7,10 +8,23 @@ export async function POST(req: Request) {
 
     const body = await req.formData();
 
+    const image = body.get("teacherImage") as File;
+
+    const bytes = await image.arrayBuffer();
+    const buffer = Buffer.from(bytes);
+
+    const imageData = await UploadImage(buffer);
+
+    if (!imageData) {
+      return Response.json({ success: false, msg: "Image Upload Failed!1" });
+    }
+
     const newTeacher = new Teacher({
       teacherName: body.get("teacherName"),
       teacherQuote: body.get("teacherQuote"),
       teacherRole: body.get("teacherRole"),
+      image_Url: imageData.secure_url,
+      public_id: imageData.public_id,
     });
 
     const result = await newTeacher.save();
