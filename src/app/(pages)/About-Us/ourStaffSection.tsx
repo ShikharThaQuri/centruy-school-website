@@ -6,7 +6,7 @@ export default async function OurStaffSection() {
   const result = await GetTeachers();
 
   return (
-    <section className="py-[5rem]">
+    <section id="staffs" className="py-[5rem]">
       <h1 className="text-center text-[#fb5607] text-[2rem] font-bold">
         Our Staffs
       </h1>

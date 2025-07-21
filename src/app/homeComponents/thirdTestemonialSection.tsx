@@ -75,7 +75,10 @@ export default function ThirdTestimonialSection() {
       </div>
 
       <div className="text-center py-[3rem]">
-        <Link className="px-[1rem] py-[0.8rem] bg-[#48cae4]" href="/About-Us">
+        <Link
+          className="px-[1rem] py-[0.8rem] bg-[#48cae4]"
+          href="/About-Us#staffs"
+        >
           View All Staffs
         </Link>
       </div>
