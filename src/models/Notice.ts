@@ -19,10 +19,6 @@ const NoticeSchema = new mongoose.Schema(
     sliceDate: {
       type: String,
     },
-
-    hero: {
-      type: String,
-    },
   },
   { timestamps: true }
 );

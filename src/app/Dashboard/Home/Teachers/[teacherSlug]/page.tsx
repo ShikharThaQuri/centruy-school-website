@@ -20,8 +20,6 @@ export default function UpdateTeacher({
       try {
         const result = await getSingleTeacher(teacherSlug);
 
-        console.log(result);
-
         setTeacherName(result?.data[0].teacherName);
         setTeacherQuote(result?.data[0].teacherQuote);
         setTeacherId(result?.data[0]._id);

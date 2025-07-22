@@ -54,6 +54,62 @@ export async function getNotice() {
   }
 }
 
+export async function getSingleNotice(id: string) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/notice/${id}`,
+      {
+        method: "GET",
+      }
+    );
+
+    const data = await res.json();
+    return data;
+  } catch (error) {
+    const data = {
+      susscess: false,
+      msg: "Something went wrong while Fetching!!",
+      error,
+    };
+
+    return data;
+  }
+}
+
+export async function UpdateNotice(previousState: unknown, formdata: FormData) {
+  try {
+    const Data = {
+      noticeHeading: formdata.get("Notice Heading"),
+      noticeDis: formdata.get("dis"),
+      pin: formdata.get("pin") === "pin",
+    };
+
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/notice/${formdata.get("id")}`,
+      {
+        method: "PATCH",
+        body: JSON.stringify(Data),
+      }
+    );
+
+    const data = await res.json();
+
+    if (data?.success === true) {
+      revalidateTag("getAllNotice");
+    }
+
+    return data;
+  } catch (error) {
+    const data = {
+      susscess: false,
+      msg: "Something went wrong while Fetching!!",
+      error,
+    };
+
+    return data;
+  }
+}
+
 export async function deleteNotice(id: String) {
   try {
     const bodydata = {

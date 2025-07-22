@@ -15,7 +15,6 @@ export async function POST(req: Request) {
       noticeDis: Body?.noticeDis,
       pin: Body?.pin,
       sliceDate: sliceDate,
-      hero: "hero",
     });
 
     const result = await newNotice.save();

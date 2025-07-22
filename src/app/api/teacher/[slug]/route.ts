@@ -5,7 +5,7 @@ import { UploadImage } from "@/utils/cloudneary/upload_image";
 
 export async function GET(
   req: Request,
-  { params }: { params: { slug: string } }
+  { params }: { params: Promise<{ slug: string }> }
 ) {
   try {
     const { slug } = await params;
