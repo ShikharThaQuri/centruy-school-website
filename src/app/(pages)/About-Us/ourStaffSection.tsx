@@ -35,12 +35,6 @@ export default async function OurStaffSection() {
           </div>
         ))}
       </div>
-
-      <div className="text-center mt-[2rem]">
-        <button className="px-[1rem] py-[0.8rem] bg-[#48cae4]">
-          Show More
-        </button>
-      </div>
     </section>
   );
 }

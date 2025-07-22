@@ -110,7 +110,7 @@ export async function UpdateNotice(previousState: unknown, formdata: FormData) {
   }
 }
 
-export async function deleteNotice(id: String) {
+export async function deleteNotice(id: string) {
   try {
     const bodydata = {
       _id: id,

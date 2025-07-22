@@ -34,12 +34,10 @@ export async function POST(req: Request) {
       data: result,
     });
   } catch (error) {
-    return Response.json(
-      {
-        success: false,
-        msg: "An error occurred while processing request.",
-      },
-      { status: 500 }
-    );
+    return Response.json({
+      success: false,
+      msg: "An error occurred while processing request.",
+      error,
+    });
   }
 }

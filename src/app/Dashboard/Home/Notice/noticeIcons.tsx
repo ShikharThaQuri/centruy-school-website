@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { deleteNotice } from "@/services/admin/notice";
 import Link from "next/link";
 
-export function NoticeIcons({ id }: { id: String }) {
+export function NoticeIcons({ id }: { id: string }) {
   return (
     <div className="flex gap-4">
       <Link href={`/Dashboard/Home/Notice/${id}`}>

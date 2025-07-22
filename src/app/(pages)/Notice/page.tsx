@@ -12,7 +12,7 @@ export default function NoticePage() {
   );
 }
 
-export async function NoticeBoxSection() {
+async function NoticeBoxSection() {
   const result = await getNotice();
 
   return (

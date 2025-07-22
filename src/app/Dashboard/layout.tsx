@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   );
 }
 
-export function Home() {
+function Home() {
   return (
     <div className="fixed bottom-[1.5rem] right-[1rem]">
       <Link

@@ -42,12 +42,10 @@ export async function POST(req: Request) {
       session,
     });
   } catch (error) {
-    return Response.json(
-      {
-        success: false,
-        msg: "An error occurred while fetching users.",
-      },
-      { status: 500 }
-    );
+    return Response.json({
+      success: false,
+      msg: "An error occurred while fetching users.",
+      error,
+    });
   }
 }

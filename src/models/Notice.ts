@@ -28,11 +28,11 @@ const Notice = mongoose.models.notice || mongoose.model("notice", NoticeSchema);
 export default Notice;
 
 export type NoticeType = {
-  _id: String;
-  noticeHeading: String;
-  noticeDis: String;
-  pin: Boolean;
-  sliceDate: String;
+  _id: string;
+  noticeHeading: string;
+  noticeDis: string;
+  pin: boolean;
+  sliceDate: string;
   createdAt: Date;
   updatedAt: Date;
 };
