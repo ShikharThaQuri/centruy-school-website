@@ -1,6 +1,7 @@
 "use client";
 
 import { UpdateNotice } from "@/services/admin/notice";
+import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
 
 const inputStyle =
@@ -17,6 +18,8 @@ export default function UpdateSingleNotice({
   noticeId: string;
   noticeDis: string;
 }) {
+  const router = useRouter();
+
   const [data, action, isPending] = useActionState(UpdateNotice, undefined);
 
   const [msg, setMsg] = useState<string>("");
@@ -27,6 +30,10 @@ export default function UpdateSingleNotice({
     setTimeout(() => {
       setMsg("");
     }, 5000);
+
+    if (data?.success === true) {
+      router.push("/Dashboard/Home/Notice");
+    }
   }, [data]);
 
   return (

@@ -1,6 +1,7 @@
 "use client";
 
 import { updateTeacher } from "@/services/admin/teachers";
+import { useRouter } from "next/navigation";
 import { useActionState, useEffect, useState } from "react";
 
 const inputStyle =
@@ -17,6 +18,8 @@ export default function UpdateTeacherForm({
   teacherId: string;
   teacherQuote: string;
 }) {
+  const router = useRouter();
+
   const [data, action, isPending] = useActionState(updateTeacher, undefined);
 
   const [msg, setMsg] = useState<string>("");
@@ -27,6 +30,10 @@ export default function UpdateTeacherForm({
     setTimeout(() => {
       setMsg("");
     }, 5000);
+
+    if (data?.success === true) {
+      router.push("/Dashboard/Home/Teachers");
+    }
   }, [data]);
 
   return (
