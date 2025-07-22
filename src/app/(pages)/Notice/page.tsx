@@ -15,6 +15,22 @@ export default function NoticePage() {
 async function NoticeBoxSection() {
   const result = await getNotice();
 
+  console.log(result?.data[0].createdAt);
+  const noticeDate = new Date(`${result?.data[0].createdAt}`);
+
+  // const noticeDates = (date) =>
+
+  const currentDate = new Date();
+  currentDate.setHours(currentDate.getHours() - 24);
+
+  console.log("date", currentDate);
+
+  if (currentDate < noticeDate) {
+    console.log("new");
+  } else {
+    console.log("old");
+  }
+
   return (
     <>
       {result?.data.map((items: NoticeType, i: number) => (
@@ -30,10 +46,9 @@ async function NoticeBoxSection() {
                 <div className="flex justify-between items-center mt-4">
                   <div className="flex justify-end gap-5">
                     <p className="text-[#d00000] font-bold text-[1.2rem]">
-                      New
-                    </p>
-                    <p className="text-[#370617] font-bold text-[1.2rem]">
-                      {items.pin ? "Pin" : ""}
+                      {new Date(`${items.createdAt}`) > currentDate
+                        ? "New"
+                        : ""}
                     </p>
                   </div>
 
@@ -65,7 +80,9 @@ async function NoticeBoxSection() {
                   <div className="flex justify-between items-center mt-4">
                     <div className="flex justify-end gap-5">
                       <p className="text-[#d00000] font-bold text-[1.2rem]">
-                        New
+                        {currentDate < new Date(`${items.createdAt}`)
+                          ? "New"
+                          : ""}
                       </p>
                       <p className="text-[#370617] font-bold text-[1.2rem]">
                         {items.pin ? "Pin" : ""}
