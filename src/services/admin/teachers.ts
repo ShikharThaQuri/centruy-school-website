@@ -67,6 +67,7 @@ export async function getSingleTeacher(id: string) {
       `${process.env.NEXT_PUBLIC_API_URL}/api/teacher/${id}`,
       {
         method: "GET",
+        // cache: "force-cache",
       }
     );
 
@@ -110,6 +111,11 @@ export async function updateTeacher(
     );
 
     const data = await res.json();
+
+    if (data?.success) {
+      revalidateTag("getAllTeachers");
+    }
+
     return data;
   } catch (error) {
     const data = {

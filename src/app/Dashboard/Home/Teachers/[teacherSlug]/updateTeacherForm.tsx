@@ -1,6 +1,6 @@
 "use client";
 
-import { AddNewTeacher, updateTeacher } from "@/services/admin/teachers";
+import { updateTeacher } from "@/services/admin/teachers";
 import { useActionState, useEffect, useState } from "react";
 
 const inputStyle =
@@ -10,12 +10,12 @@ const labelStyle = "block text-sm font-medium text-gray-700 mb-2";
 
 export default function UpdateTeacherForm({
   teacherName,
-  teacherQuote,
   teacherId,
+  teacherQuote,
 }: {
   teacherName: string;
-  teacherQuote: string;
   teacherId: string;
+  teacherQuote: string;
 }) {
   const [data, action, isPending] = useActionState(updateTeacher, undefined);
 
@@ -46,7 +46,6 @@ export default function UpdateTeacherForm({
           name="Teacher Name"
           defaultValue={`${teacherName}`}
           required
-          placeholder="Enter Teacher Name Name"
           className={`${inputStyle}`}
         />
       </div>
@@ -60,7 +59,6 @@ export default function UpdateTeacherForm({
           name="Quote"
           defaultValue={`${teacherQuote}`}
           required
-          placeholder="Enter Notice Teacher Quote"
           className={`${inputStyle}`}
         />
       </div>

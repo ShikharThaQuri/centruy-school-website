@@ -1,6 +1,6 @@
 import connectDB from "@/db/connect";
 import Teacher from "@/models/Teacher";
-import { deleteImage } from "@/utils/cloudneary/deleteImage";
+import { DeleteImage } from "@/utils/cloudneary/deleteImage";
 import { UploadImage } from "@/utils/cloudneary/upload_image";
 
 export async function POST(req: Request) {
@@ -71,7 +71,7 @@ export async function DELETE(req: Request) {
     const body = await req.json();
 
     const result = await Teacher.findByIdAndDelete({ _id: body?._id });
-    await deleteImage(body?.publicId);
+    await DeleteImage(body?.publicId);
 
     return Response.json({
       success: true,
