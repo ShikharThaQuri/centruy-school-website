@@ -15,21 +15,8 @@ export default function NoticePage() {
 async function NoticeBoxSection() {
   const result = await getNotice();
 
-  console.log(result?.data[0].createdAt);
-  const noticeDate = new Date(`${result?.data[0].createdAt}`);
-
-  // const noticeDates = (date) =>
-
   const currentDate = new Date();
   currentDate.setHours(currentDate.getHours() - 24);
-
-  console.log("date", currentDate);
-
-  if (currentDate < noticeDate) {
-    console.log("new");
-  } else {
-    console.log("old");
-  }
 
   return (
     <>
