@@ -112,7 +112,7 @@ export default function EmojiSection() {
                 setExecellent(true))
           }
         >
-          😘
+          😍
         </span>
         <p className={`${emojiTextStyle}`}>Excellent</p>
       </div>
