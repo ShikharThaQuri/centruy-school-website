@@ -46,8 +46,8 @@ export async function PATCH(
       return Response.json({ success: false, msg: "There is no such user!!" });
     }
 
-    const date = new Date();
-    const sliceDate = date.toString().substring(0, 16);
+    // const date = new Date();
+    // const sliceDate = date.toString().substring(0, 16);
 
     const result = await Notice.findByIdAndUpdate(
       { _id: singleNotice._id },
@@ -55,7 +55,7 @@ export async function PATCH(
         noticeHeading: Body?.noticeHeading,
         noticeDis: Body?.noticeDis,
         pin: Body?.pin,
-        sliceDate: sliceDate,
+        sliceDate: singleNotice.sliceDate,
       },
       { new: true }
     );

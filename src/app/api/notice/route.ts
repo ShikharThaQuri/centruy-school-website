@@ -37,7 +37,7 @@ export async function GET() {
   try {
     await connectDB();
 
-    const result = await Notice.find({});
+    const result = await Notice.find({}).sort({ _id: -1 });
 
     return Response.json({
       success: true,
