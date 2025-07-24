@@ -1,4 +1,3 @@
-import EmojiSection from "./emojiSection";
 import FeedbackForm from "./feedbackForm";
 
 export default function FeedbackPage() {
@@ -12,7 +11,6 @@ export default function FeedbackPage() {
           Please let us know your thoughts
         </p>
       </div>
-      <EmojiSection />
       <FeedbackForm />
     </main>
   );
