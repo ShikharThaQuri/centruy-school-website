@@ -35,7 +35,7 @@ export default function AddTeacher() {
               type="text"
               name="Teacher Name"
               required
-              placeholder="Enter Teacher Name Name"
+              placeholder="Enter Teacher Name"
               className={`${inputStyle}`}
             />
           </div>
@@ -48,24 +48,29 @@ export default function AddTeacher() {
               rows={4}
               name="Quote"
               required
-              placeholder="Enter Notice Teacher Quote"
+              placeholder="Enter Teacher Quote"
               className={`${inputStyle}`}
             />
           </div>
 
-          <select
-            name="role"
-            className={`${inputStyle}`}
-            defaultValue={"default"}
-            required
-          >
-            <option value="default" disabled hidden>
-              Role
-            </option>
-            <option value="Teacher">Teacher</option>
-            <option value="Helper">Helper</option>
-            <option value="Accountant">Accountant</option>
-          </select>
+          <div className="flex flex-col w-full text-left ">
+            <label className={`${labelStyle}`} htmlFor="Teacher Role">
+              Select Teacher Role
+            </label>
+            <select
+              name="role"
+              className={`${inputStyle}`}
+              defaultValue={"default"}
+              required
+            >
+              <option value="default" disabled hidden>
+                Role
+              </option>
+              <option value="Teacher">Teacher</option>
+              <option value="Helper">Helper</option>
+              <option value="Accountant">Accountant</option>
+            </select>
+          </div>
 
           <div className="mb-[3rem] tablet:flex tablet:flex-col tablet:gap-y-[2rem] tablet:items-center">
             <label className={`${labelStyle}`} htmlFor="Teacher Image">

@@ -11,6 +11,8 @@ export async function POST(req: Request) {
 
     const image = body.get("teacherImage") as File;
 
+    console.log("image : ", image);
+
     const bytes = await image.arrayBuffer();
     const buffer = Buffer.from(bytes);
 
