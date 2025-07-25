@@ -1,4 +1,7 @@
+import { eventType } from "@/models/Gallery";
+import { getAllEvents } from "@/services/admin/gallery";
 import { Suspense } from "react";
+import { EventIcons } from "./eventIcons";
 
 export default function GalleryPage() {
   return (
@@ -13,19 +16,19 @@ export default function GalleryPage() {
 }
 
 async function GalleryBox() {
-  // const result = await getProducts();
+  const result = await getAllEvents();
 
   return (
     <>
-      {/* {result?.data?.map((items: ProductType, i: number) => ( */}
-      <div
-        // key={i}
-        className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
-      >
-        <h2>Gallery Name</h2>
-        <p>edit & delete</p>
-      </div>
-      {/* ))} */}
+      {result?.data?.map((items: eventType, i: number) => (
+        <div
+          key={i}
+          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
+        >
+          <h2>{items.eventHeading}</h2>
+          <EventIcons id={items._id} />
+        </div>
+      ))}
     </>
   );
 }

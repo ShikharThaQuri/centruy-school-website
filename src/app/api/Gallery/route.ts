@@ -58,3 +58,23 @@ export async function POST(req: Request) {
     });
   }
 }
+
+export async function GET() {
+  try {
+    await connectDB();
+
+    const result = await Event.find({});
+
+    return Response.json({
+      success: true,
+      msg: "Successfully get all the Events.",
+      data: result,
+    });
+  } catch (error) {
+    return Response.json({
+      success: false,
+      msg: "something went wrong while adding Notice!!",
+      error,
+    });
+  }
+}
