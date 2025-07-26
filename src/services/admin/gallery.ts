@@ -77,6 +77,10 @@ export async function deleteEvent(id: string) {
     });
 
     const data = await res.json();
+    if (data?.success === true) {
+      revalidateTag("getAllEvents");
+    }
+
     return data;
   } catch (error) {
     const data = {

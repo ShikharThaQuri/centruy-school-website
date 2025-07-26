@@ -1,6 +1,13 @@
 import connectDB from "@/db/connect";
-import Event from "@/models/Gallery";
+import Event, { eventType } from "@/models/Gallery";
+import { DeleteImage } from "@/utils/cloudneary/deleteImage";
 import { UploadEventImage } from "@/utils/cloudneary/uploadEventImage";
+
+type items = {
+  public_url: string;
+  image_url: string;
+  _id: string;
+};
 
 export async function POST(req: Request) {
   try {
@@ -69,6 +76,35 @@ export async function GET() {
       success: true,
       msg: "Successfully get all the Events.",
       data: result,
+    });
+  } catch (error) {
+    return Response.json({
+      success: false,
+      msg: "something went wrong while adding Notice!!",
+      error,
+    });
+  }
+}
+
+export async function DELETE(req: Request) {
+  try {
+    await connectDB();
+
+    const body = await req.json();
+
+    const event = await Event.findByIdAndDelete(body.id);
+    if (!event) {
+      return Response.json({ success: false, msg: "There is no such Event!!" });
+    }
+
+    event.Images.forEach(async (items: items, index: number) => {
+      await DeleteImage({ public_id: items.public_url });
+    });
+
+    return Response.json({
+      success: true,
+      msg: "successfully Delete a Event",
+      event,
     });
   } catch (error) {
     return Response.json({
