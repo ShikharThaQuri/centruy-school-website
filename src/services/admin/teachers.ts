@@ -27,6 +27,7 @@ export async function AddNewTeacher(
 
     if (data?.success) {
       revalidateTag("getAllTeachers");
+      revalidateTag("getSingleTeacher");
     }
 
     return data;
@@ -67,7 +68,8 @@ export async function getSingleTeacher(id: string) {
       `${process.env.NEXT_PUBLIC_API_URL}/api/teacher/${id}`,
       {
         method: "GET",
-        // cache: "force-cache",
+        cache: "force-cache",
+        next: { tags: ["getSingleTeacher"] },
       }
     );
 
@@ -114,6 +116,7 @@ export async function updateTeacher(
 
     if (data?.success) {
       revalidateTag("getAllTeachers");
+      revalidateTag("getSingleTeacher");
     }
 
     return data;

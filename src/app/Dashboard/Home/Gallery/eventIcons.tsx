@@ -8,7 +8,7 @@ import { deleteEvent } from "@/services/admin/gallery";
 export function EventIcons({ id }: { id: string }) {
   return (
     <div className="flex gap-4">
-      <Link href={`/Dashboard/Home/Notice/${id}`}>
+      <Link href={`/Dashboard/Home/Gallery/${id}`}>
         <EditIcon className="text-[blue]  cursor-pointer" />
       </Link>
 

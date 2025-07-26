@@ -34,7 +34,7 @@ export default function UpdateTeacherForm({
     if (data?.success === true) {
       router.push("/Dashboard/Home/Teachers");
     }
-  }, [data]);
+  }, [data, router]);
 
   return (
     <form action={action} className="flex flex-col">

@@ -1,5 +1,5 @@
 import connectDB from "@/db/connect";
-import Event, { eventType } from "@/models/Gallery";
+import Event from "@/models/Gallery";
 import { DeleteImage } from "@/utils/cloudneary/deleteImage";
 import { UploadEventImage } from "@/utils/cloudneary/uploadEventImage";
 
@@ -15,7 +15,7 @@ export async function POST(req: Request) {
     const body = await req.formData();
 
     const files = body.getAll("images");
-    let images = [];
+    const images = [];
 
     for (const file of files) {
       if (file instanceof File) {
@@ -97,7 +97,7 @@ export async function DELETE(req: Request) {
       return Response.json({ success: false, msg: "There is no such Event!!" });
     }
 
-    event.Images.forEach(async (items: items, index: number) => {
+    event.Images.forEach(async (items: items) => {
       await DeleteImage({ public_id: items.public_url });
     });
 

@@ -19,6 +19,7 @@ export async function AddNewNotice(previousState: unknown, formdata: FormData) {
 
     if (data?.success === true) {
       revalidateTag("getAllNotice");
+      revalidateTag("getSingleNotice");
     }
 
     return data;
@@ -42,6 +43,7 @@ export async function getNotice() {
     });
 
     const data = await res.json();
+
     return data;
   } catch (error) {
     const data = {
@@ -60,6 +62,8 @@ export async function getSingleNotice(id: string) {
       `${process.env.NEXT_PUBLIC_API_URL}/api/notice/${id}`,
       {
         method: "GET",
+        cache: "force-cache",
+        next: { tags: ["getSingleNotice"] },
       }
     );
 
@@ -96,6 +100,7 @@ export async function UpdateNotice(previousState: unknown, formdata: FormData) {
 
     if (data?.success === true) {
       revalidateTag("getAllNotice");
+      revalidateTag("getSingleNotice");
     }
 
     return data;

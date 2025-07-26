@@ -29,6 +29,7 @@ export async function UploadGalleryEvent(
 
     if (data?.success === true) {
       revalidateTag("getAllEvents");
+      revalidateTag("getSingleEvents");
     }
 
     return data;
@@ -65,6 +66,73 @@ export async function getAllEvents() {
   }
 }
 
+export async function getSingleEvent(id: string) {
+  try {
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/Gallery/${id}`,
+      {
+        method: "GET",
+        cache: "force-cache",
+        next: { tags: ["getSingleEvents"] },
+      }
+    );
+
+    const data = await res.json();
+
+    return data;
+  } catch (error) {
+    const data = {
+      susscess: false,
+      msg: "Something went wrong while Fetching!!",
+      error,
+    };
+
+    return data;
+  }
+}
+
+export async function UpdateEvent(previousState: unknown, formData: FormData) {
+  try {
+    const files = formData.getAll("files");
+    const galleryHeading = formData.get("Gallery Heading") as string;
+    const dis = formData.get("dis") as string;
+    const eventType = formData.get("event type") as string;
+
+    const DataForm = new FormData();
+    files.forEach((file) => {
+      DataForm.append("images", file);
+    });
+    DataForm.set("galleryHeading", galleryHeading);
+    DataForm.set("dis", dis);
+    DataForm.set("eventType", eventType);
+
+    const res = await fetch(
+      `${process.env.NEXT_PUBLIC_API_URL}/api/Gallery/${formData.get("id")}`,
+      {
+        method: "PATCH",
+        body: DataForm,
+      }
+    );
+
+    const data = await res.json();
+
+    if (data?.success === true) {
+      revalidateTag("getAllEvents");
+      revalidateTag("getSingleEvents");
+    }
+
+    return data;
+  } catch (error) {
+    const data = {
+      susscess: false,
+      msg: "Something went wrong while Fetching!!",
+      error,
+    };
+
+    return data;
+  }
+}
+
 export async function deleteEvent(id: string) {
   try {
     const bodyData = {
@@ -79,6 +147,7 @@ export async function deleteEvent(id: string) {
     const data = await res.json();
     if (data?.success === true) {
       revalidateTag("getAllEvents");
+      revalidateTag("getSingleEvents");
     }
 
     return data;

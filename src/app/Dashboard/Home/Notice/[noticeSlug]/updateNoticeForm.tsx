@@ -34,7 +34,7 @@ export default function UpdateSingleNotice({
     if (data?.success === true) {
       router.push("/Dashboard/Home/Notice");
     }
-  }, [data]);
+  }, [data, router]);
 
   return (
     <div className="py-[2rem] flex items-center justify-center h-screen bg-gray-100">
