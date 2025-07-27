@@ -7,7 +7,7 @@ export default function HeroSection() {
       <Image
         src={heroImage}
         alt="Hero Image"
-        width={500}
+        width={900}
         height={300}
         className="h-full w-full object-cover object-top"
       />
