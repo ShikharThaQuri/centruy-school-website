@@ -36,13 +36,13 @@ export default function SwiperGallery() {
     <Swiper
       spaceBetween={20}
       slidesPerView={3}
-      navigation={true}
+      // navigation={true}
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
       autoplay={{
         delay: 2000,
         disableOnInteraction: false,
-        pauseOnMouseEnter: true,
+        // pauseOnMouseEnter: true,
       }}
       loop={true}
       modules={[Pagination, Navigation, Autoplay]}
@@ -54,8 +54,8 @@ export default function SwiperGallery() {
               items.Images[Math.floor(Math.random() * items.Images.length)]
                 ?.image_url
             }
-            width={300}
-            height={300}
+            width={600}
+            height={600}
             alt="Gallery Item 1"
             className="w-full h-[16rem] rounded-lg object-cover object-center"
           />
