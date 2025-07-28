@@ -106,7 +106,7 @@ export default function UpdateTeacherForm({
 
       <div className="text-right mt-[0.4rem] w-full">
         <h1 className={`${data?.success ? "text-blue-700" : "text-red-700"} `}>
-          {isPending ? "waiting..." : msg}
+          {isPending ? "Updating..." : msg}
         </h1>
       </div>
     </form>

@@ -94,7 +94,7 @@ export default function UpdateSingleNotice({
             <h1
               className={`${data?.success ? "text-blue-700" : "text-red-700"} `}
             >
-              {isPending ? "waiting..." : msg}
+              {isPending ? "Updatin..." : msg}
             </h1>
           </div>
         </form>

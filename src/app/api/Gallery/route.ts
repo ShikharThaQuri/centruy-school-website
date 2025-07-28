@@ -43,10 +43,14 @@ export async function POST(req: Request) {
       }
     }
 
+    const nowDate = new Date();
+    const sliceDate = nowDate.toString().substring(0, 16);
+
     const newEvent = new Event({
       eventHeading: body.get("galleryHeading"),
       eventDis: body.get("dis"),
       type: body.get("eventType"),
+      date: sliceDate,
       Images: images,
     });
 
@@ -70,7 +74,7 @@ export async function GET() {
   try {
     await connectDB();
 
-    const result = await Event.find({});
+    const result = await Event.find({}).sort({ _id: -1 });
 
     return Response.json({
       success: true,

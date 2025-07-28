@@ -35,6 +35,12 @@ export default function FeedbackForm() {
       setFeedbackThankMsg(false);
     }, 2000);
 
+    setTerrible(false);
+    setBad(false);
+    setOkey(false);
+    setGood(false);
+    setExecellent(false);
+
     setFeedbackMsg("");
   };
 

@@ -1,9 +1,8 @@
 import Image from "next/image";
-import RightArrow from "./rightArrow";
 import Link from "next/link";
 
 import sports from "@/images/PlayOn _ The Future of School Athletics and Activities.jpeg";
-import AcademicActivities from "@/images/What Is Multimedia Technology in Education_ Benefits &amp; Uses.jpeg";
+import AcademicActivities from "@/images/What Is Multimedia Technology in Education_ Benefits Uses.jpeg";
 import Tour from "@/images/How Much to Tip a Tour Guide _ ExperienceFirst.jpeg";
 import Programs from "@/images/Yuvabharathi Public School Annual Day Celebrations 2013.jpeg";
 
@@ -12,8 +11,6 @@ const imageStyle =
   "brightness-50 w-full h-full object-cover object-center rounded cursor-pointer hover:scale-[1.1] transition-all duration-200 ";
 const headingStyle =
   "absolute top-[1rem] left-[1rem] text-white font-bold text-[1.2rem]";
-const buttonStyle =
-  "cursor-pointer absolute bottom-[0.5rem] right-[1rem] px-[1rem] py-[0.3rem] bg-[#7f4f24] text-white text-[0.9rem] flex items-center";
 
 export default function SchoolGalleryPage() {
   return (
@@ -73,12 +70,6 @@ export default function SchoolGalleryPage() {
             />
           </Link>
           <h1 className={headingStyle}>Programs</h1>
-          <Link href={"/"}>
-            <button className={buttonStyle}>
-              View All
-              <RightArrow />
-            </button>
-          </Link>
         </div>
       </section>
     </main>

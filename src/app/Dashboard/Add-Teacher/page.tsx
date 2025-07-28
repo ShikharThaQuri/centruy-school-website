@@ -96,7 +96,7 @@ export default function AddTeacher() {
             <h1
               className={`${data?.success ? "text-blue-700" : "text-red-700"} `}
             >
-              {isPending ? "waiting..." : msg}
+              {isPending ? "Adding..." : msg}
             </h1>
           </div>
         </form>

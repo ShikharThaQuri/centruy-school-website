@@ -17,6 +17,11 @@ const GallerySchema = new mongoose.Schema(
       require: true,
     },
 
+    date: {
+      type: String,
+      require: true,
+    },
+
     Images: [
       {
         public_url: { type: String, require: true },
@@ -36,6 +41,7 @@ export type eventType = {
   eventHeading: string;
   eventDis: string;
   type: string;
+  date: string;
   Images: [
     {
       public_url: string;
