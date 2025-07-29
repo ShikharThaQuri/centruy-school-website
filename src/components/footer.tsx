@@ -1,15 +1,16 @@
 import FooterSocialLinks from "./footerSocialLinks";
 
-const smallText = "text-[1rem] footerMedia:text-[0.8rem] text-white";
+const smallText =
+  "text-[0.9rem] md:text-[1rem] footerMedia:text-[0.8rem] text-white";
 
 export default function Footer() {
   return (
-    <div className="bg-[#1b263b] px-[11.5rem] footerMedia:px-[5rem] py-[3.5rem] flex  justify-between max700:justify-center ">
-      <h1 className="max700:hidden">Logo</h1>
+    <div className="bg-[#1b263b] py-[3rem] xl:px-[9.3rem] lg:px-[7.5rem] md:px-[5rem] px-[3.1rem] flex md:flex-row flex-col  justify-between md:items-center items-center gap-[3rem] md:justify-between ">
+      <h1>Logo</h1>
 
-      <div className="flex max400:flex-col max400:gap-y-[2.5rem]">
-        <div className="ml-[5rem] max700:ml-[0]">
-          <h1 className="text-[1.5rem] max400:text-[1.5rem] footerMedia:text-[1.2rem] text-[white] font-bold mb-[1rem]">
+      <div className="flex gap-[2.5rem]">
+        <div>
+          <h1 className="text-[1.2rem] md:text-[1.5rem] text-[white] font-bold mb-[1rem]">
             Contact Us
           </h1>
 
@@ -19,8 +20,8 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="ml-[5rem] max400:ml-[0]">
-          <h1 className="text-[1.5rem]  max400:text-[1.5rem] footerMedia:text-[1.2rem] text-[white] font-bold mb-[1rem]">
+        <div>
+          <h1 className="text-[1.2rem]  md:text-[1.5rem] text-[white] font-bold mb-[1rem]">
             Socal Links
           </h1>
 

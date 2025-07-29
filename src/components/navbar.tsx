@@ -7,8 +7,8 @@ export default function Navbar() {
   const pathname = usePathname();
 
   return (
-    <nav className="bg-[#faedcd] ">
-      <div className="text-center pt-4 px-[3rem] text-white">
+    <nav className="bg-[#faedcd] pt-8 pb-4">
+      <div className="text-center px-[3rem] text-white">
         <h1 className="text-[23px] tablet:text-[25px] max400:text-[20px] font-bold text-[#0096C7] ">
           CENTURY EDUCATION ACADEMY SCHOOL
         </h1>
@@ -18,7 +18,7 @@ export default function Navbar() {
         </h3>
       </div>
 
-      <div className="flex items-center justify-between py-4 px-[3rem] text-black font-bold text-[17px]">
+      <div className="flex items-center justify-between pt-5 px-[3rem] text-black font-bold text-[17px] md:flex hidden">
         <h1>LOGO</h1>
         <ul className="flex gap-[2rem]">
           <li>

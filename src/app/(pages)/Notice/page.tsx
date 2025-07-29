@@ -3,7 +3,7 @@ import { getNotice } from "@/services/admin/notice";
 
 export default function NoticePage() {
   return (
-    <main className="bg-white min-h-screen text-black px-[120px] py-10">
+    <main className="bg-white p-[1rem] min-h-screen text-black px-[50px] xl:px-[150px] lg:px-[120px] md:px-[80px] px-[50px]">
       <h1 className="text-[1.5rem] font-bold text-[#fb5607] mb-[1rem]">
         Notice
       </h1>
@@ -24,22 +24,24 @@ async function NoticeBoxSection() {
         <div key={i}>
           {items.pin ? (
             <div key={i} className={`flex flex-col `}>
-              <div className="p-4 bg-[#bb9457] rounded-lg shadow-md mb-[1rem]">
-                <h1 className="font-bold text-[1.3rem] ">
+              <div className="p-4 bg-[#bb9457] rounded-lg shadow-md">
+                <h1 className="font-bold lg:text-[1.3rem]  text-[1.2rem] ">
                   {items.noticeHeading}
                 </h1>
-                <p>{items.noticeDis}</p>
+                <p className=" mt-[0.5rem] xl:text-[1.1rem] md:text-[1rem] text-[0.9rem]">
+                  {items.noticeDis}
+                </p>
 
-                <div className="flex justify-between items-center mt-4">
+                <div className="flex items-center justify-between mt-4">
                   <div className="flex justify-end gap-5">
-                    <p className="text-[#d00000] font-bold text-[1.2rem]">
+                    <p className="text-[#d00000] font-bold xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
                       {new Date(`${items.createdAt}`) > currentDate
                         ? "New"
                         : ""}
                     </p>
                   </div>
 
-                  <h2 className="text-right text-white font-bold text-[1.2rem]">
+                  <h2 className="text-right text-white font-bold xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
                     {items.sliceDate}
                   </h2>
                 </div>
@@ -59,24 +61,26 @@ async function NoticeBoxSection() {
             ) : (
               <div key={i} className={`flex flex-col `}>
                 <div className="p-4 bg-[#bb9457] rounded-lg shadow-md mb-[1rem]">
-                  <h1 className="font-bold text-[1.3rem] ">
+                  <h1 className="font-bold lg:text-[1.3rem] text-[1.2rem] ">
                     {items.noticeHeading}
                   </h1>
-                  <p>{items.noticeDis}</p>
+                  <p className="mt-[0.5rem] xl:text-[1.1rem] md:text-[1rem] text-[0.9rem]">
+                    {items.noticeDis}
+                  </p>
 
-                  <div className="flex justify-between items-center mt-4">
+                  <div className="flex items-center justify-between mt-4">
                     <div className="flex justify-end gap-5">
                       <p className="text-[#d00000] font-bold text-[1.2rem]">
                         {currentDate < new Date(`${items.createdAt}`)
                           ? "New"
                           : ""}
                       </p>
-                      <p className="text-[#370617] font-bold text-[1.2rem]">
+                      <p className="text-[#370617] font-bold  xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
                         {items.pin ? "Pin" : ""}
                       </p>
                     </div>
 
-                    <h2 className="text-right text-white font-bold text-[1.2rem]">
+                    <h2 className="text-right text-white font-bold lg:text-[1.1rem] xl:text-[1.2rem]  text-[0.9rem]">
                       {items.sliceDate}
                     </h2>
                   </div>
