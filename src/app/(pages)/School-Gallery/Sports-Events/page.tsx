@@ -33,10 +33,9 @@ async function SportEventData() {
                     {items.date || "Date not Provided!!"}
                   </h1>
                 </div>
-                <p>{items.eventDis}</p>
 
                 {/* ----- Image Section ----- */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-[1rem]">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 mt-[1rem]">
                   {items.Images.map((img, i) => (
                     <div key={img._id || i}>
                       <Image
@@ -49,6 +48,8 @@ async function SportEventData() {
                     </div>
                   ))}
                 </div>
+
+                <p>{items.eventDis}</p>
               </div>
             </section>
           ) : (

@@ -4,7 +4,7 @@ import { FormEvent, useState } from "react";
 
 const emojiDivStyle = "flex flex-col items-center";
 const emojiStyle =
-  "text-[2.5rem] cursor-pointer grayscale transform transition duration-[0.25s] ease-in-out hover:translate-y-[-10px] hover:scale-[1.1] hover:grayscale-0";
+  "md:text-[2.5rem] text-[1.5rem] cursor-pointer grayscale transform transition duration-[0.25s] ease-in-out hover:translate-y-[-10px] hover:scale-[1.1] hover:grayscale-0";
 
 const emojiTextStyle = "font-bold ";
 
@@ -48,9 +48,11 @@ export default function FeedbackForm() {
     <>
       {feedbackThankMsg ? (
         <div className="z-50 fixed top-0 bottom-0 right-0 left-0 flex justify-center items-center">
-          <div className="w-[20rem] bg-white h-[20rem] flex flex-col justify-center items-center gap-[1rem] rounded-lg shadow-xl/30">
+          <div className="md:w-[20rem] w-[15rem] bg-white md:h-[20rem] h-[15rem] flex flex-col justify-center items-center gap-[1rem] rounded-lg shadow-xl/30">
             <span className="text-[3rem]">🥰</span>
-            <h1 className="font-bold text-[2rem]">Thank You!!!</h1>
+            <h1 className="font-bold md:text-[2rem] text-[1.5rem]">
+              Thank You!!!
+            </h1>
           </div>
         </div>
       ) : (
@@ -168,10 +170,10 @@ export default function FeedbackForm() {
           onChange={(e) => setFeedbackMsg(e.target.value)}
           required
           placeholder="Your Thougths!!"
-          className="w-[30rem] block px-3 py-2 mb-[1rem] border inset-shadow-sm border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500 "
+          className="md:w-[30] w-[20rem] block px-3 py-2 mb-[1rem] border inset-shadow-sm border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500 "
         />
 
-        <button className="cursor-pointer w-[30rem] py-[0.8rem] py-[1rem] text-[1.2rem] text-white rounded bg-linear-to-bl from-violet-800 to-fuchsia-600">
+        <button className="cursor-pointer md:w-[30] w-[20rem] py-[0.8rem] py-[1rem] text-[1.2rem] text-white rounded bg-linear-to-bl from-violet-800 to-fuchsia-600">
           Submit Feedback
         </button>
       </form>
