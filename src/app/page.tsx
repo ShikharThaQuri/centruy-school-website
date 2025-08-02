@@ -1,10 +1,12 @@
 import Link from "next/link";
 import FirstSection from "./homeComponents/firstSection";
 import HeroSection from "./homeComponents/herosection";
-import GallerySection from "./homeComponents/secondGallerySection";
 import ThirdTestimonialSection from "./homeComponents/thirdTestemonialSection";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
+import { Suspense } from "react";
+import SwiperGallery from "./homeComponents/swiperGallerySection";
+import HomeGalleryLoading from "./homeComponents/homeGalleryLoading";
 
 export default function Home() {
   return (
@@ -15,9 +17,13 @@ export default function Home() {
       <FirstSection />
 
       <section className="py-[2rem] ">
-        <h1 className="text-3xl font-bold text-center mb-6">Gallery</h1>
+        <h1 className="text-3xl font-bold text-center mb-6 text-[#fb5607]">
+          Gallery
+        </h1>
         <div className="px-[20px] py-[2rem] bg-[#e9edc9] rounded-lg shadow-md">
-          <GallerySection />
+          <Suspense fallback={<HomeGalleryLoading />}>
+            <SwiperGallery />
+          </Suspense>
         </div>
         <div className="text-center my-[3rem]">
           <Link

@@ -64,7 +64,7 @@ export async function POST(req: Request) {
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while adding Notice!!",
+      msg: "something went wrong while adding Event!!",
       error,
     });
   }
@@ -84,7 +84,7 @@ export async function GET() {
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while adding Notice!!",
+      msg: "something went wrong while getting Event!!",
       error,
     });
   }

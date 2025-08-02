@@ -1,5 +1,7 @@
 import { NoticeType } from "@/models/Notice";
 import { getNotice } from "@/services/admin/notice";
+import { Suspense } from "react";
+import NoticeLoading from "./noticeLoading";
 
 export default function NoticePage() {
   return (
@@ -7,13 +9,24 @@ export default function NoticePage() {
       <h1 className="text-[1.5rem] font-bold text-[#fb5607] mb-[1rem]">
         Notice
       </h1>
-      <NoticeBoxSection />
+
+      <Suspense fallback={<NoticeLoading />}>
+        <NoticeBoxSection />
+      </Suspense>
     </main>
   );
 }
 
 async function NoticeBoxSection() {
   const result = await getNotice();
+
+  if (result?.success === false) {
+    return (
+      <div className="min-h-[50vh] flex justify-center items-center">
+        <h1 className="text-[green] text-[2rem] font-bold">{result.msg}</h1>
+      </div>
+    );
+  }
 
   const currentDate = new Date();
   currentDate.setHours(currentDate.getHours() - 24);

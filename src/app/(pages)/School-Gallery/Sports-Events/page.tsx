@@ -1,6 +1,7 @@
 import EventSection from "@/components/eventSection";
 import { getAllEvents } from "@/services/admin/gallery";
 import { Suspense } from "react";
+import EventLoading from "../eventLoading";
 
 export default function SportsEvent() {
   return (
@@ -9,7 +10,7 @@ export default function SportsEvent() {
         SPORTS EVENTS
       </h1>
 
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<EventLoading />}>
         <SportEventData />
       </Suspense>
     </main>
@@ -18,6 +19,14 @@ export default function SportsEvent() {
 
 async function SportEventData() {
   const result = await getAllEvents();
+
+  if (result?.success === false) {
+    return (
+      <div className="min-h-[50vh] flex justify-center items-center">
+        <h1 className="text-[green] text-[2rem] font-bold">{result.msg}</h1>
+      </div>
+    );
+  }
 
   return (
     <>

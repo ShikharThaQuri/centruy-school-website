@@ -11,11 +11,13 @@ import "swiper/css/navigation";
 import { Pagination, Navigation, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { getAllEvents } from "@/services/admin/gallery";
+import HomeGalleryLoading from "./homeGalleryLoading";
 
 const imageDivStyles = "bg-gray-200 h-[15rem] rounded-lg shadow-md";
 
 export default function SwiperGallery() {
   const [data, setData] = useState<eventType[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
@@ -28,9 +30,13 @@ export default function SwiperGallery() {
         setData(result?.data || []);
       } catch (error) {
         console.log(error);
+      } finally {
+        setIsLoading(false);
       }
     })();
   }, []);
+
+  if (isLoading) return <HomeGalleryLoading />;
 
   return (
     <Swiper
@@ -62,7 +68,7 @@ export default function SwiperGallery() {
               items.Images[Math.floor(Math.random() * items.Images.length)]
                 ?.image_url
             }
-            width={600}
+            width={900}
             height={600}
             alt="Gallery Item 1"
             className="w-full h-[16rem] rounded-lg object-cover object-center"
