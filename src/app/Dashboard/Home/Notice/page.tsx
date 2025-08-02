@@ -23,7 +23,7 @@ async function NoticeBox() {
       {result?.data?.map((items: NoticeType, i: number) => (
         <div
           key={i}
-          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
+          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between  w-[80%] md:w-[70%] lg:w-[50%] items-center"
         >
           <h2>{items.noticeHeading}</h2>
 

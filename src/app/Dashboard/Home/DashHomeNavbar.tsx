@@ -9,7 +9,7 @@ export default function DashHomeNavbar() {
   const pathname = usePathname();
 
   return (
-    <div className="fixed top-0 left-[15.8rem] right-0 h-[5rem] bg-[#f2e9e4] flex justify-center items-center">
+    <div className="fixed top-0 left-0 md:left-[15.8rem] right-0 h-[5rem] bg-[#f2e9e4] flex justify-center items-center">
       <ul className=" flex justify-center items-center gap-10">
         <li>
           <Link

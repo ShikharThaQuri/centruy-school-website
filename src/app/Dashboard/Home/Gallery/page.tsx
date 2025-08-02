@@ -23,7 +23,7 @@ async function GalleryBox() {
       {result?.data?.map((items: eventType, i: number) => (
         <div
           key={i}
-          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[50%] items-center"
+          className="bg-white rounded shadow-md p-4 mb-5 flex justify-between w-[80%] md:w-[70%] lg:w-[50%] items-center"
         >
           <h2>{items.eventHeading}</h2>
           <EventIcons id={items._id} />
