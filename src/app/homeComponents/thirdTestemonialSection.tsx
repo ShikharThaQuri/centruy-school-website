@@ -5,7 +5,7 @@ import photo3 from "@/images/profile-9.jpg";
 import Link from "next/link";
 
 const boxStyles =
-  "h-auto w-[18rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 ";
+  "h-auto max-w-[18rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 ";
 
 const imageStyles =
   "w-[8rem] h-[8rem] rounded-full mx-auto  object-cover items-center mt-[-4rem]";
@@ -32,7 +32,7 @@ export default function ThirdTestimonialSection() {
         </p>
       </div>
 
-      <div className="px-[2rem] mt-[8rem] flex justify-evenly gap-[1rem] text-center">
+      <div className="mt-[8rem] flex flex-wrap md:flex-nowrap  items:center  justify-center md:justify-between lg:justify-evenly gap-y-[6.5rem] md:gap-[1rem] text-center">
         <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo1} alt="img" className={imageStyles} />
           <h1 className="font-bold mt-[1rem]  text-[#c1121f]">

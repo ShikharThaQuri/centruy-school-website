@@ -170,10 +170,10 @@ export default function FeedbackForm() {
           onChange={(e) => setFeedbackMsg(e.target.value)}
           required
           placeholder="Your Thougths!!"
-          className="md:w-[30] w-[20rem] block px-3 py-2 mb-[1rem] border inset-shadow-sm border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500 "
+          className="md:w-[30rem] w-[20rem] block px-3 py-2 mb-[1rem] border inset-shadow-sm border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-500 "
         />
 
-        <button className="cursor-pointer md:w-[30] w-[20rem] py-[0.8rem] py-[1rem] text-[1.2rem] text-white rounded bg-linear-to-bl from-violet-800 to-fuchsia-600">
+        <button className="cursor-pointer md:w-[30rem] w-[20rem] py-[0.8rem] py-[1rem] text-[1.2rem] text-white rounded bg-linear-to-bl from-violet-800 to-fuchsia-600">
           Submit Feedback
         </button>
       </form>

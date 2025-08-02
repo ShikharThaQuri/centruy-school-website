@@ -4,16 +4,16 @@ import photo2 from "@/images/photo2.jpeg";
 import photo3 from "@/images/School-cover-photo.jpg";
 
 const boxStyles =
-  "h-[24rem] cursor-pointer w-[18rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 hover:h-[24rem] hover:mt-[-4rem] transition-all duration-200 ";
+  "h-[24rem]  z-50 cursor-pointer w-[18rem] md:w-[30rem] 2xl:w-[30rem] lg:w-[20rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 hover:h-[24rem] hover:mt-[-4rem] transition-all duration-200 ";
 
 export default function FirstSection() {
   return (
-    <section className="px-[2rem] flex justify-evenly gap-[1rem]">
+    <section className="flex justify-evenly gap-[4rem] flex-wrap lg:flex-nowrap mb-[3rem]">
       <div className={`${boxStyles} bg-[#c1121f] text-center`}>
         <Image
           src={photo1}
           alt="img"
-          className="w-full h-[50%]  object-center items-center"
+          className="w-full h-[50%]  object-cover items-center"
         />
 
         <div className="mx-[0.5rem] my-[1rem]">
@@ -30,7 +30,7 @@ export default function FirstSection() {
         <Image
           src={photo2}
           alt="img"
-          className="w-full h-[50%]  object-center items-center"
+          className="w-full h-[50%]  object-cover items-center"
         />
         <div className="mx-[0.5rem] my-[1rem]">
           <h1 className="font-bold text-[1.4rem] text-white ">
@@ -48,7 +48,7 @@ export default function FirstSection() {
         <Image
           src={photo3}
           alt="img"
-          className="w-full h-[50%]  object-center items-center"
+          className="w-full h-[50%]  object-cover items-center"
         />
         <div className="mx-[0.5rem] my-[1rem]">
           <h1 className="font-bold text-[1.4rem] text-white ">

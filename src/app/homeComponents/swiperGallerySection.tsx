@@ -35,7 +35,15 @@ export default function SwiperGallery() {
   return (
     <Swiper
       spaceBetween={20}
-      slidesPerView={3}
+      slidesPerView={1}
+      breakpoints={{
+        800: {
+          slidesPerView: 3,
+        },
+        500: {
+          slidesPerView: 2,
+        },
+      }}
       // navigation={true}
       // pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}

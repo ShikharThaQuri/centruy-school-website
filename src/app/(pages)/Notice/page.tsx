@@ -3,7 +3,7 @@ import { getNotice } from "@/services/admin/notice";
 
 export default function NoticePage() {
   return (
-    <main className="bg-white p-[1rem] min-h-screen text-black px-[50px] xl:px-[150px] lg:px-[120px] md:px-[80px] px-[50px]">
+    <main className="py-[1rem] min-h-screen">
       <h1 className="text-[1.5rem] font-bold text-[#fb5607] mb-[1rem]">
         Notice
       </h1>

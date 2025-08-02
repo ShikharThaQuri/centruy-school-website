@@ -4,7 +4,7 @@ import Herosection from "./heroSection";
 
 export default function AboutUsPage() {
   return (
-    <main className="bg-white text-black px-[120px]">
+    <main className="">
       <Herosection />
       <MapSection />
       <OurStaffSection />

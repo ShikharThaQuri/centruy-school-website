@@ -51,7 +51,6 @@ export async function PATCH(
       return Response.json({ success: false, msg: "There is no such user!!" });
     }
 
-    console.log("publicId", teacher.public_id);
     const public_id = teacher.public_id;
 
     await DeleteImage({ public_id });

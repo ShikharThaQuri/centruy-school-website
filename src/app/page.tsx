@@ -8,15 +8,15 @@ import Footer from "@/components/footer";
 
 export default function Home() {
   return (
-    <div className="bg-[white] text-black">
+    <div className="bg-[white] text-black px-[4rem] md:px-[5rem] xl:px-[7.5rem]">
       <Navbar />
 
       <HeroSection />
       <FirstSection />
 
-      <section className=" py-[2rem] ">
+      <section className="py-[2rem] ">
         <h1 className="text-3xl font-bold text-center mb-6">Gallery</h1>
-        <div className="mx-[100px] px-[20px] py-[2rem] bg-[#e9edc9] rounded-lg shadow-md">
+        <div className="px-[20px] py-[2rem] bg-[#e9edc9] rounded-lg shadow-md">
           <GallerySection />
         </div>
         <div className="text-center my-[3rem]">
