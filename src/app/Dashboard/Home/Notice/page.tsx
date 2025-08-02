@@ -2,13 +2,14 @@ import { NoticeType } from "@/models/Notice";
 import { getNotice } from "@/services/admin/notice";
 import { Suspense } from "react";
 import { NoticeIcons } from "./noticeIcons";
+import EditDeleteLoading from "../editdeleteLoading";
 
 export default function NoticePage() {
   return (
     <main className="flex flex-col items-center justify-start p-[1rem] min-h-[80vh]">
       <h1 className="text-center mb-[2rem] font-bold text-xl">Notice</h1>
 
-      <Suspense fallback={<h1>Loading...</h1>}>
+      <Suspense fallback={<EditDeleteLoading />}>
         <NoticeBox />
       </Suspense>
     </main>
@@ -17,6 +18,14 @@ export default function NoticePage() {
 
 async function NoticeBox() {
   const result = await getNotice();
+
+  if (result?.success === false) {
+    return (
+      <div className="min-h-[30vh] flex justify-center items-center">
+        <h1 className="text-[green] text-[2rem] font-bold">{result.msg}</h1>
+      </div>
+    );
+  }
 
   return (
     <>

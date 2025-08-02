@@ -18,7 +18,7 @@ export default function Home() {
 
       <section className="py-[2rem] ">
         <h1 className="text-3xl font-bold text-center mb-6 text-[#fb5607]">
-          Gallery
+          GALLERY
         </h1>
         <div className="px-[20px] py-[2rem] bg-[#e9edc9] rounded-lg shadow-md">
           <Suspense fallback={<HomeGalleryLoading />}>

@@ -1,8 +1,6 @@
 import Image from "next/image";
 import defaultImage from "@/images/M A Y O N A K A   N O   Y U M E.jpg";
-
-const animateSpin =
-  "animate-spin h-8 w-8 border-4 border-blue-500 border-t-transparent rounded-full";
+import Loading from "@/app/loading";
 
 export default function EventLoading() {
   return (
@@ -11,18 +9,15 @@ export default function EventLoading() {
         <div className="w-full lg:w-[45%]">
           <div className="flex justify-between items-center mb-[0.5rem]">
             <h1 className="font-bold text-[0.9rem] md:text-[1.2rem] text-[#c1121f] flex items-center gap-[1rem]">
-              <svg className={animateSpin} viewBox="0 0 24 24"></svg>
-              Loading
+              <Loading />
             </h1>
 
             <h1 className="font-bold text-[0.7rem] md:text-[1.1rem] text-[#c1121f] flex items-center gap-[1rem]">
-              <svg className={animateSpin} viewBox="0 0 24 24"></svg>
-              Loading
+              <Loading />
             </h1>
           </div>
           <p className="text-[0.7rem] md:text-[1rem] text-[#c1121f] px-[1rem] flex items-center gap-[1rem]">
-            <svg className={animateSpin} viewBox="0 0 24 24"></svg>
-            Loading
+            <Loading />
           </p>
         </div>
 

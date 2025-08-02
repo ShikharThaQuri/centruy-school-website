@@ -18,13 +18,13 @@ export async function GET(
 
     return Response.json({
       success: true,
-      msg: "successfully get single Teacher.",
+      msg: "Successfully get a single Teacher.",
       data: teacher,
     });
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "Something went wrong while posting Teacher!",
+      msg: "Something went wrong while getting a Teacher!",
       error,
     });
   }
@@ -48,7 +48,10 @@ export async function PATCH(
     const teacher = await Teacher.findById(slug);
 
     if (!teacher) {
-      return Response.json({ success: false, msg: "There is no such user!!" });
+      return Response.json({
+        success: false,
+        msg: "There is no such Teacher!!",
+      });
     }
 
     const public_id = teacher.public_id;
@@ -71,13 +74,13 @@ export async function PATCH(
 
     return Response.json({
       success: true,
-      msg: "successfully get single teacher.",
+      msg: "Successfully update a teacher.",
       data: result,
     });
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "Something went wrong while posting Teacher!",
+      msg: "Something went wrong while Updating Teacher!",
       error,
     });
   }

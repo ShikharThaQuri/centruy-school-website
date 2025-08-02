@@ -1,25 +1,21 @@
-const animateSpin =
-  "animate-spin h-8 w-8 border-4 border-blue-500 border-t-transparent rounded-full";
+import Loading from "@/app/loading";
 
 export default function NoticeLoading() {
   return (
     <div className={`flex flex-col `}>
       <div className="p-4 bg-[#bb9457] rounded-lg shadow-md">
         <h1 className="font-bold lg:text-[1.3rem]  text-[1.2rem] flex items-center gap-[1rem]">
-          <svg className={animateSpin} viewBox="0 0 24 24"></svg>
-          Loading
+          <Loading />
         </h1>
         <p className=" mt-[0.5rem] xl:text-[1.1rem] md:text-[1rem] text-[0.9rem] flex items-center gap-[1rem]">
-          <svg className={animateSpin} viewBox="0 0 24 24"></svg>
-          Loading
+          <Loading />
         </p>
 
         <div className="flex items-center justify-between mt-4">
           <div className="flex justify-end gap-5"></div>
 
           <h2 className="text-right text-white font-bold xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem] flex items-center gap-[1rem]">
-            <svg className={animateSpin} viewBox="0 0 24 24"></svg>
-            Loading
+            <Loading />
           </h2>
         </div>
       </div>

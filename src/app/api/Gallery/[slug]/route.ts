@@ -31,7 +31,7 @@ export async function GET(
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while Getting Notice!!",
+      msg: "Something went wrong while Getting Event!!",
       error,
     });
   }
@@ -104,7 +104,7 @@ export async function PATCH(
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while Deleting Notice!!",
+      msg: "Something went wrong while Deleting Event!!",
       error,
     });
   }

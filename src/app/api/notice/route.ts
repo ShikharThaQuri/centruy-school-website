@@ -27,7 +27,7 @@ export async function POST(req: Request) {
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while adding Notice!!",
+      msg: "Something went wrong while adding Notice!!",
       error,
     });
   }
@@ -47,7 +47,7 @@ export async function GET() {
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while adding Notice!!",
+      msg: "Something went wrong while getting Notice!!",
       error,
     });
   }
@@ -69,7 +69,7 @@ export async function DELETE(req: Request) {
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while deleting Notice!!",
+      msg: "Something went wrong while deleting Notice!!",
       error,
     });
   }

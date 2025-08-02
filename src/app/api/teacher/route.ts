@@ -19,7 +19,7 @@ export async function POST(req: Request) {
     const imageData = await UploadImage(buffer);
 
     if (!imageData) {
-      return Response.json({ success: false, msg: "Image Upload Failed!1" });
+      return Response.json({ success: false, msg: "Image Upload Failed!!" });
     }
 
     const newTeacher = new Teacher({
@@ -77,13 +77,13 @@ export async function DELETE(req: Request) {
 
     return Response.json({
       success: true,
-      msg: "successfully delete a Teacher",
+      msg: "Successfully delete a Teacher",
       result,
     });
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "Something went wrong while Getting Teachers!",
+      msg: "Something went wrong while Deleting Teachers!",
       error,
     });
   }

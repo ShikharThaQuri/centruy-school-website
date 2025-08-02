@@ -13,18 +13,21 @@ export async function GET(
     const singleNotice = await Notice.findById(slug);
 
     if (!singleNotice) {
-      return Response.json({ success: false, msg: "There is no such user!!" });
+      return Response.json({
+        success: false,
+        msg: "There is no such Notice!!",
+      });
     }
 
     return Response.json({
       success: true,
-      msg: "successfully get single Notice.",
+      msg: "Successfull in getting single Notice.",
       data: singleNotice,
     });
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while deleting Notice!!",
+      msg: "Something went wrong while getting Notice!!",
       error,
     });
   }
@@ -43,7 +46,10 @@ export async function PATCH(
     const singleNotice = await Notice.findById(slug);
 
     if (!singleNotice) {
-      return Response.json({ success: false, msg: "There is no such user!!" });
+      return Response.json({
+        success: false,
+        msg: "There is no such Notice!!",
+      });
     }
 
     // const date = new Date();
@@ -68,7 +74,7 @@ export async function PATCH(
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while deleting Notice!!",
+      msg: "Something went wrong while updating Notice!!",
       error,
     });
   }

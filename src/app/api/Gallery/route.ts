@@ -84,7 +84,7 @@ export async function GET() {
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while getting Event!!",
+      msg: "Something went wrong while getting Event!!",
       error,
     });
   }
@@ -107,13 +107,13 @@ export async function DELETE(req: Request) {
 
     return Response.json({
       success: true,
-      msg: "successfully Delete a Event",
+      msg: "Successfully Delete a Event",
       event,
     });
   } catch (error) {
     return Response.json({
       success: false,
-      msg: "something went wrong while adding Notice!!",
+      msg: "Something went wrong while Deleting Event!!",
       error,
     });
   }
