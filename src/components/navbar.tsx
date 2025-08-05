@@ -3,11 +3,36 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import { useState } from "react";
+
 export default function Navbar() {
   const pathname = usePathname();
 
+  const [navIcon, isNavIcon] = useState<boolean>(false);
+
   return (
-    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] lg:mx-[-7.5rem]">
+    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] lg:mx-[-7.5rem] relative">
+      {/* --------- Hamburger Icon ---------- */}
+      <div className="block md:hidden absolute top-[4.5rem] right-[1rem] z-[200]">
+        {navIcon ? (
+          <CloseIcon
+            className="text-[2.5rem] text-black"
+            onClick={(e) => {
+              isNavIcon(false);
+            }}
+          />
+        ) : (
+          <MenuIcon
+            className="text-[2.5rem]"
+            onClick={(e) => {
+              isNavIcon(true);
+            }}
+          />
+        )}
+      </div>
+
       <div className="text-center px-[3rem] text-white">
         <h1 className="text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
           CENTURY EDUCATION ACADEMY SCHOOL
@@ -65,6 +90,60 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
+
+      {/* ---------- mobile version ----------- */}
+      {/* {navIcon && ( */}
+      <div
+        className={`md:hidden fixed top-0 left-0 bottom-0 right-0 z-[101] h-0 bg-[#252422] flex flex-col items-center justify-center gap-[1rem] text-black font-bold ${
+          navIcon ? "h-full" : ""
+        }  transtion-all duration-1000`}
+      >
+        <ul className="flex flex-col gap-[1rem] overflow-hidden">
+          <li>
+            <Link
+              href="/"
+              className={`${pathname === "/" ? "text-[#c1121f]" : ""}`}
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/About-Us"
+              className={`${pathname === "/About-Us" ? "text-[#c1121f]" : ""}`}
+            >
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/School-Gallery"
+              className={`${
+                pathname === "/School-Gallery" ? "text-[#c1121f]" : ""
+              }`}
+            >
+              School Gallery
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/Notice"
+              className={`${pathname === "/Notice" ? "text-[#c1121f]" : ""}`}
+            >
+              Notice
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/Feedback"
+              className={`${pathname === "/Feedback" ? "text-[#c1121f]" : ""}`}
+            >
+              Feedback
+            </Link>
+          </li>
+        </ul>
+      </div>
+      {/* )} */}
     </nav>
   );
 }
