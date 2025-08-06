@@ -19,20 +19,14 @@ export default function Navbar() {
         {navIcon ? (
           <CloseIcon
             className="text-[2.5rem] text-black"
-            onClick={(e) => {
-              isNavIcon(false);
-            }}
+            onClick={() => isNavIcon(false)}
           />
         ) : (
-          <MenuIcon
-            className="text-[2.5rem]"
-            onClick={(e) => {
-              isNavIcon(true);
-            }}
-          />
+          <MenuIcon className="text-[2.5rem]" onClick={() => isNavIcon(true)} />
         )}
       </div>
 
+      {/* ---------- Nav Heading ----------- */}
       <div className="text-center px-[3rem] text-white">
         <h1 className="text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
           CENTURY EDUCATION ACADEMY SCHOOL
@@ -43,6 +37,7 @@ export default function Navbar() {
         </h3>
       </div>
 
+      {/* --------- navbar links -------------- */}
       <div className="2xl:text-[1.2rem] text-[1rem] flex items-center justify-between pt-[1rem] px-[7.5rem] text-black font-bold md:flex hidden">
         <h1>LOGO</h1>
         <ul className="flex gap-[2rem]">
@@ -92,17 +87,17 @@ export default function Navbar() {
       </div>
 
       {/* ---------- mobile version ----------- */}
-      {/* {navIcon && ( */}
       <div
-        className={`md:hidden fixed top-0 left-0 bottom-0 right-0 z-[101] h-0 bg-[#252422] flex flex-col items-center justify-center gap-[1rem] text-black font-bold ${
-          navIcon ? "h-full" : ""
-        }  transtion-all duration-1000`}
+        className={`block md:hidden fixed top-0 left-0 right-0 z-[101] bg-[#252422] flex flex-col items-center justify-center gap-[1rem] font-bold ${
+          navIcon ? "h-full" : "h-0"
+        }  transtion-all duration-800 text-white text-[1.3rem]`}
       >
         <ul className="flex flex-col gap-[1rem] overflow-hidden">
           <li>
             <Link
               href="/"
               className={`${pathname === "/" ? "text-[#c1121f]" : ""}`}
+              onClick={() => isNavIcon(false)}
             >
               Home
             </Link>
@@ -111,6 +106,7 @@ export default function Navbar() {
             <Link
               href="/About-Us"
               className={`${pathname === "/About-Us" ? "text-[#c1121f]" : ""}`}
+              onClick={() => isNavIcon(false)}
             >
               About Us
             </Link>
@@ -121,6 +117,7 @@ export default function Navbar() {
               className={`${
                 pathname === "/School-Gallery" ? "text-[#c1121f]" : ""
               }`}
+              onClick={() => isNavIcon(false)}
             >
               School Gallery
             </Link>
@@ -129,6 +126,7 @@ export default function Navbar() {
             <Link
               href="/Notice"
               className={`${pathname === "/Notice" ? "text-[#c1121f]" : ""}`}
+              onClick={() => isNavIcon(false)}
             >
               Notice
             </Link>
@@ -137,13 +135,13 @@ export default function Navbar() {
             <Link
               href="/Feedback"
               className={`${pathname === "/Feedback" ? "text-[#c1121f]" : ""}`}
+              onClick={() => isNavIcon(false)}
             >
               Feedback
             </Link>
           </li>
         </ul>
       </div>
-      {/* )} */}
     </nav>
   );
 }

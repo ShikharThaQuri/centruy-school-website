@@ -15,7 +15,7 @@ export default function HomeGalleryLoading() {
           className="w-full h-[16rem] rounded-lg object-cover object-center"
         />
       </div>
-      <div className={imageDivStyles}>
+      <div className={`${imageDivStyles} hidden md:block`}>
         <Image
           src={defaultImage}
           width={900}
@@ -24,7 +24,7 @@ export default function HomeGalleryLoading() {
           className="w-full h-[16rem] rounded-lg object-cover object-center"
         />
       </div>
-      <div className={imageDivStyles}>
+      <div className={`${imageDivStyles} hidden lg:block`}>
         <Image
           src={defaultImage}
           width={900}
