@@ -13,7 +13,7 @@ export default function Navbar() {
   const [navIcon, isNavIcon] = useState<boolean>(false);
 
   return (
-    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] lg:mx-[-7.5rem] relative">
+    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] xl:mx-[-7.5rem] relative">
       {/* --------- Hamburger Icon ---------- */}
       <div className="block md:hidden absolute top-[4.5rem] right-[1rem] z-[200]">
         {navIcon ? (
@@ -22,7 +22,10 @@ export default function Navbar() {
             onClick={() => isNavIcon(false)}
           />
         ) : (
-          <MenuIcon className="text-[2.5rem]" onClick={() => isNavIcon(true)} />
+          <MenuIcon
+            className="text-[2.5rem] text-black"
+            onClick={() => isNavIcon(true)}
+          />
         )}
       </div>
 
@@ -38,7 +41,7 @@ export default function Navbar() {
       </div>
 
       {/* --------- navbar links -------------- */}
-      <div className="2xl:text-[1.2rem] text-[1rem] flex items-center justify-between pt-[1rem] px-[7.5rem] text-black font-bold md:flex hidden">
+      <div className="2xl:text-[1.2rem] text-[1rem] flex items-center justify-between pt-[1rem] px-[4rem] md:px-[5rem] xl:px-[7.5rem] text-black font-bold md:flex hidden">
         <h1>LOGO</h1>
         <ul className="flex gap-[2rem]">
           <li>
@@ -88,7 +91,7 @@ export default function Navbar() {
 
       {/* ---------- mobile version ----------- */}
       <div
-        className={`block md:hidden fixed top-0 left-0 right-0 z-[101] bg-[#252422] flex flex-col items-center justify-center gap-[1rem] font-bold ${
+        className={`block md:hidden fixed top-0 left-0 right-0 z-[100] bg-[#252422] flex flex-col items-center justify-center gap-[1rem] font-bold ${
           navIcon ? "h-full" : "h-0"
         }  transtion-all duration-800 text-white text-[1.3rem]`}
       >

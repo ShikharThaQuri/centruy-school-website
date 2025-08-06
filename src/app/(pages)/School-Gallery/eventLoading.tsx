@@ -1,6 +1,6 @@
 import Image from "next/image";
 import defaultImage from "@/images/M A Y O N A K A   N O   Y U M E.jpg";
-import Loading from "@/app/loading";
+import Loading from "@/components/loading";
 
 export default function EventLoading() {
   return (

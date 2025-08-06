@@ -5,7 +5,7 @@ const smallText =
 
 export default function Footer() {
   return (
-    <div className="mx-[-4rem] md:mx-[-5rem] lg:mx-[-7.5rem] bg-[#1b263b] py-[3rem] xl:px-[9.3rem] lg:px-[7.5rem] md:px-[5rem] px-[3.1rem] flex md:flex-row flex-col  justify-between md:items-center items-center gap-[3rem] md:justify-between ">
+    <div className="mx-[-4rem] md:mx-[-5rem] xl:mx-[-7.5rem] bg-[#1b263b] py-[3rem] xl:px-[9.3rem] lg:px-[7.5rem] md:px-[5rem] px-[3.1rem] flex md:flex-row flex-col  justify-between md:items-center items-center gap-[3rem] md:justify-between ">
       <h1>Logo</h1>
 
       <div className="flex gap-[2.5rem]">

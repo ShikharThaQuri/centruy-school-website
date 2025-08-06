@@ -1,4 +1,4 @@
-import Loading from "@/app/loading";
+import Loading from "@/components/loading";
 
 export default function NoticeLoading() {
   return (

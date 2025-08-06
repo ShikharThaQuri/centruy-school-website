@@ -2,7 +2,7 @@
 
 import EditIcon from "@mui/icons-material/Edit";
 import DeleteIcon from "@mui/icons-material/Delete";
-import Loading from "@/app/loading";
+import Loading from "@/components/loading";
 
 export default function EditDeleteLoading() {
   return (

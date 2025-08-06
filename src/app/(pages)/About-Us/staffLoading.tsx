@@ -1,4 +1,4 @@
-import Loading from "@/app/loading";
+import Loading from "@/components/loading";
 import defaultImage from "@/images/M A Y O N A K A   N O   Y U M E.jpg";
 import Image from "next/image";
 
