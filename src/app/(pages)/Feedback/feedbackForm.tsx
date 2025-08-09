@@ -6,7 +6,7 @@ const emojiDivStyle = "flex flex-col items-center";
 const emojiStyle =
   "md:text-[2.5rem] text-[1.5rem] cursor-pointer grayscale transform transition duration-[0.25s] ease-in-out hover:translate-y-[-10px] hover:scale-[1.1] hover:grayscale-0";
 
-const emojiTextStyle = "font-bold ";
+const emojiTextStyle = "font-bold text-[0.8rem] md:text-[1rem]";
 
 export default function FeedbackForm() {
   const [feedbackMsg, setFeedbackMsg] = useState<string>("");
@@ -59,7 +59,7 @@ export default function FeedbackForm() {
         ""
       )}
 
-      <section className="flex justify-center items-center gap-[2rem] my-[2rem]">
+      <section className="flex justify-center items-center gap-[1.2rem] md:gap-[2rem] my-[2rem]">
         <div className={`${emojiDivStyle}`}>
           <span
             className={`${emojiStyle} ${
@@ -179,7 +179,7 @@ export default function FeedbackForm() {
       </form>
 
       {errorMsg ? (
-        <h1 className="text-[red] w-[30rem] mt-[0.5rem] text-right">
+        <h1 className="text-[red] w-[20rem] md:w-[30rem] text-[0.5rem] md:text-[1rem] mt-[0.5rem] text-right ">
           {errorMsg}
         </h1>
       ) : (

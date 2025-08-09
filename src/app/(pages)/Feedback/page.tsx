@@ -4,7 +4,7 @@ export default function FeedbackPage() {
   return (
     <main className="min-h-[80vh] bg-[#f4f1de] py-[5rem] flex flex-col justify-center items-center mx-[-4rem] md:mx-[-5rem] lg:mx-[-7.5rem]">
       <div className="text-center">
-        <h1 className="md:text-[2.5rem] text-[2rem] font-bold">
+        <h1 className="md:text-[2.5rem] text-[1.5rem] font-bold">
           How do you express about <br /> our school?
         </h1>
         <p className="text-[1rem] md:text-[1.5rem] text-gray-700 mt-[1rem]">
