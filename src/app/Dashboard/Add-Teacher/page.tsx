@@ -24,7 +24,9 @@ export default function AddTeacher() {
   return (
     <div className="py-[2rem] flex items-center justify-center h-screen bg-gray-100">
       <div className="bg-white p-8 rounded shadow-md w-96">
-        <h1 className="text-2xl font-bold mb-6 text-center">Add Teacher</h1>
+        <h1 className="text-xl md:text-2xl font-bold mb-6 text-center">
+          Add Teacher
+        </h1>
 
         <form action={action} className="flex flex-col">
           <div className="flex flex-col w-full text-left ">
