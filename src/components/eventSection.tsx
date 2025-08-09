@@ -16,7 +16,7 @@ export default function EventSection({
 }) {
   return (
     <>
-      {result?.data.map((items: eventType, i: number) => (
+      {result?.data?.map((items: eventType, i: number) => (
         <div key={i}>
           {items.type === type ? (
             <section className="border border-[black] shadow-xl/20 bg-[#fefae0] p-[1rem] mb-[3rem]">
