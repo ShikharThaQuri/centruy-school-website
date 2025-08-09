@@ -14,8 +14,8 @@ const headingStyle =
 
 export default function SchoolGalleryPage() {
   return (
-    <main className="min-h-screen">
-      <h1 className="text-center font-bold text-[2.5rem] text-[red] pt-[2rem] mb-[1.5rem]">
+    <main className="min-h-screen py-[2rem]">
+      <h1 className="text-center font-bold text-[2.5rem] text-[red] mb-[1.5rem]">
         School Gallery
       </h1>
 
