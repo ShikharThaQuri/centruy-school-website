@@ -5,7 +5,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <div>
       <DashboardNavbar />
-      <main className=" bg-gray-100 text-black  px-[4rem] md:ml-[15.7rem] py-[2rem]">
+      <main className=" bg-gray-100 text-black  px-[2rem] md:ml-[15.7rem] py-[2rem]">
         {children}
       </main>
       <Home />
