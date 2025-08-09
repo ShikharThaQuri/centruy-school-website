@@ -13,19 +13,23 @@ export default function Navbar() {
   const [navIcon, isNavIcon] = useState<boolean>(false);
 
   return (
-    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] xl:mx-[-7.5rem] relative">
+    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] xl:mx-[-7.5rem]">
       {/* --------- Hamburger Icon ---------- */}
-      <div className="block md:hidden absolute top-[4.5rem] right-[1rem] z-[200]">
+      <div className="block md:hidden fixed top-[4.5rem] right-[1rem] z-[200]">
         {navIcon ? (
-          <CloseIcon
-            className="text-[2.5rem] text-black"
-            onClick={() => isNavIcon(false)}
-          />
+          <div className="px-[0.8rem] py-[0.8rem] rounded-full backdrop-blur-md bg-white/30">
+            <CloseIcon
+              className="text-[2.5rem] text-black"
+              onClick={() => isNavIcon(false)}
+            />
+          </div>
         ) : (
-          <MenuIcon
-            className="text-[2.5rem] text-black"
-            onClick={() => isNavIcon(true)}
-          />
+          <div className="px-[0.8rem] py-[0.8rem] rounded-full backdrop-blur-md bg-white/30">
+            <MenuIcon
+              className="text-[2.5rem] text-black"
+              onClick={() => isNavIcon(true)}
+            />
+          </div>
         )}
       </div>
 
