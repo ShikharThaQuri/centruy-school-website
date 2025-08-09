@@ -18,7 +18,7 @@ export default function FirstSection() {
 
         <div className="mx-[0.5rem] my-[1rem]">
           <h1 className="font-bold text-[1.4rem] text-white ">+400 Students</h1>
-          <p className="mt-[1rem] text-gray-300">
+          <p className="mt-[1rem] text-gray-300 text-[0.8rem] md:text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
@@ -36,7 +36,7 @@ export default function FirstSection() {
           <h1 className="font-bold text-[1.4rem] text-white ">
             Quality Education
           </h1>
-          <p className="mt-[1rem] text-gray-300">
+          <p className="mt-[1rem] text-gray-300 text-[0.8rem] md:text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
@@ -54,7 +54,7 @@ export default function FirstSection() {
           <h1 className="font-bold text-[1.4rem] text-white ">
             Calm Enviroment
           </h1>
-          <p className="mt-[1rem] text-gray-300">
+          <p className="mt-[1rem] text-gray-300 text-[0.8rem] md:text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
