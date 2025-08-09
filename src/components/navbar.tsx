@@ -35,11 +35,11 @@ export default function Navbar() {
 
       {/* ---------- Nav Heading ----------- */}
       <div className="text-center px-[3rem] text-white">
-        <h1 className="text-[1.2rem] md:text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
+        <h1 className="text-[1rem] md:text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
           CENTURY EDUCATION ACADEMY SCHOOL
         </h1>
 
-        <h3 className="text-[1rem] 2xl:text-[1.5rem] font-bold text-[#07617E]">
+        <h3 className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#07617E]">
           Kohalpur 3, Banke
         </h3>
       </div>

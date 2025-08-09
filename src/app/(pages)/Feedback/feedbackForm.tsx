@@ -50,9 +50,12 @@ export default function FeedbackForm() {
         <div className="z-50 fixed top-0 bottom-0 right-0 left-0 flex justify-center items-center">
           <div className="md:w-[20rem] w-[15rem] bg-white md:h-[20rem] h-[15rem] flex flex-col justify-center items-center gap-[1rem] rounded-lg shadow-xl/30">
             <span className="text-[3rem]">🥰</span>
-            <h1 className="font-bold md:text-[2rem] text-[1.5rem]">
-              Thank You!!!
-            </h1>
+            <div className="text-center">
+              <h1 className="font-bold md:text-[2rem] text-[1.5rem]">
+                Thank You!!!
+              </h1>
+              <p>For your Feedback.</p>
+            </div>
           </div>
         </div>
       ) : (
