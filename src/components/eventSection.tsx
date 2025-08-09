@@ -46,7 +46,7 @@ export default function EventSection({
                 </div>
 
                 <div>
-                  <p className="text-[0.7rem] md:text-[1rem] mb-[0.5rem] px-[1rem]">
+                  <p className="text-[0.7rem] md:text-[1rem] mb-[0.5rem]">
                     {items.eventDis}
                   </p>
 
