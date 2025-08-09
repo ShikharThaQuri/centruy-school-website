@@ -33,7 +33,6 @@ export default function HomeGalleryLoading() {
           className="w-full h-[16rem] rounded-lg object-cover object-center"
         />
       </div>
-      ;
     </section>
   );
 }

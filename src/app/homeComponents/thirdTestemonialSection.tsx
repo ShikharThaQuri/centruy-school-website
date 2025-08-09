@@ -15,18 +15,16 @@ export default function ThirdTestimonialSection() {
     <section>
       <div className="text-center py-[2rem]">
         <h1
-          className="font-bold text-[2.5rem] after:w-[10rem] after:h-[0.5rem] 
+          className="font-bold text-[1.5rem] md:text-[2.5rem] after:w-[10rem] after:h-[0.5rem] 
         after:bg-[#fb8500] after:block after:mx-[auto] my-[2rem] after:mt-[1rem]
         before:w-[10rem] before:h-[0.5rem] 
         before:bg-[#ffb703] before:block before:mx-[auto] before:mb-[1rem]"
         >
           WHAT CENTURY SAY
         </h1>
-        <p>
+        <p className="text-[0.8rem] md:text-[1rem]">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed faucibus
           est tempus, lobortis sapien id, lobortis metus. Nam et tempus est.
-        </p>
-        <p>
           Donec eleifend sapien quis magna commodo dictum. Curabitur at blandit
           erat.
         </p>
@@ -40,7 +38,7 @@ export default function ThirdTestimonialSection() {
           </h1>
           <p className="text-[#7f5539]">Founder</p>
 
-          <p className="mx-[2rem] my-[1rem]">
+          <p className="mx-[2rem] my-[1rem] text-[0.8rem] md:text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
@@ -52,9 +50,9 @@ export default function ThirdTestimonialSection() {
           <h1 className="font-bold mt-[1rem]  text-[#c1121f]">
             Aayush Chaudhary
           </h1>
-          <p className="text-[#7f5539]">Principle</p>
+          <p className="text-[#7f5539]">Principal</p>
 
-          <p className="mx-[2rem] my-[1rem]">
+          <p className="mx-[2rem] my-[1rem] text-[0.8rem] text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
@@ -64,9 +62,9 @@ export default function ThirdTestimonialSection() {
         <div className={`${boxStyles} bg-[#e9c46a]`}>
           <Image src={photo3} alt="img" className={imageStyles} />
           <h1 className="font-bold mt-[1rem] text-[#c1121f]">Ratna Bohara</h1>
-          <p className="text-[#7f5539]">Vice-Principle</p>
+          <p className="text-[#7f5539]">Vice-Principal</p>
 
-          <p className="mx-[2rem] my-[1rem]">
+          <p className="mx-[2rem] my-[1rem] text-[0.8rem] text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
