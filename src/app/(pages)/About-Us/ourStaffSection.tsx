@@ -33,7 +33,9 @@ export default async function OurStaffSection() {
               {items.teacherName}
             </h1>
             <p className="text-gray-800">{items.teacherRole}</p>
-            <p className="mt-[1rem] text-[1.1rem]">{items.teacherQuote}</p>
+            <p className="mt-[1rem] text-[0.8rem] md:text-[1.1rem]">
+              {items.teacherQuote}
+            </p>
           </div>
         </div>
       ))}

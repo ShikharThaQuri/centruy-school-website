@@ -52,7 +52,7 @@ export default function ThirdTestimonialSection() {
           </h1>
           <p className="text-[#7f5539]">Principal</p>
 
-          <p className="mx-[2rem] my-[1rem] text-[0.8rem] text-[1rem]">
+          <p className="mx-[2rem] my-[1rem] text-[0.8rem] md:text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.
@@ -64,7 +64,7 @@ export default function ThirdTestimonialSection() {
           <h1 className="font-bold mt-[1rem] text-[#c1121f]">Ratna Bohara</h1>
           <p className="text-[#7f5539]">Vice-Principal</p>
 
-          <p className="mx-[2rem] my-[1rem] text-[0.8rem] text-[1rem]">
+          <p className="mx-[2rem] my-[1rem] text-[0.8rem] md:text-[1rem]">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
             faucibus est tempus, lobortis sapien id, lobortis metus. Nam et
             tempus est.

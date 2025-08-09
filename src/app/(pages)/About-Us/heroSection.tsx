@@ -15,11 +15,11 @@ export default function Herosection() {
         />
 
         <div className="max-w-[40rem]">
-          <h1 className="text-3xl font-bold text-[#c1121f]">
+          <h1 className="text-xl md:text-3xl font-bold text-[#c1121f]">
             Lokendra Chand ThaQuri
           </h1>
           <p className="text-[#ffbd00] ">Founder</p>
-          <p className="mt-4 text-[1.2rem]">
+          <p className="mt-4 text-[1rem] md:text-[1.2rem]">
             Welcome to our school! We are dedicated to providing a nurturing and
             inclusive environment for all students. Our mission is to foster
             academic excellence, personal growth, and a love for learning.
@@ -29,11 +29,11 @@ export default function Herosection() {
 
       <section className="flex md:flex-row flex-col-reverse gap-[1.5rem] md:gap-[4rem] justify-between items-center  py-10">
         <div className="max-w-[40rem]">
-          <h1 className="text-3xl font-bold text-[#c1121f]">
+          <h1 className="text-xl md:text-3xl font-bold text-[#c1121f]">
             Aayush Chaudhary
           </h1>
           <p className="text-[#ffbd00] ">Principle</p>
-          <p className="mt-4 text-[1.2rem]">
+          <p className="mt-4 text-[1rem] md:text-[1.2rem]">
             Welcome to our school! We are dedicated to providing a nurturing and
             inclusive environment for all students. Our mission is to foster
             academic excellence, personal growth, and a love for learning.

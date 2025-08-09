@@ -1,7 +1,7 @@
 export default function MapSection() {
   return (
     <div className=" py-[2rem] md:py-[5rem] flex flex-col items-center">
-      <h1 className="text-[#fb5607] text-[2rem] font-bold mb-[3rem]">
+      <h1 className="text-[#fb5607] text-[2rem] font-bold mb-[1.5rem]">
         School Location
       </h1>
       <div className="w-full max-w-[1200px] lg:h-[60vh] md:h-[50vh] h-[40vh]">
