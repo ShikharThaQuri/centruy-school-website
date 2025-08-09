@@ -33,7 +33,7 @@ async function NoticeBoxSection() {
 
   return (
     <>
-      {result?.data.map((items: NoticeType, i: number) => (
+      {result?.data?.map((items: NoticeType, i: number) => (
         <div key={i}>
           {items.pin ? (
             <div key={i} className={`flex flex-col `}>
@@ -67,7 +67,7 @@ async function NoticeBoxSection() {
       ))}
 
       <div className="mt-[3rem]">
-        {result?.data.map((items: NoticeType, i: number) => (
+        {result?.data?.map((items: NoticeType, i: number) => (
           <div key={i}>
             {items.pin ? (
               ""
