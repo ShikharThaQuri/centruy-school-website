@@ -22,18 +22,9 @@ export default function EventSection({
             <section className="border border-[black] shadow-xl/20 bg-[#fefae0] p-[1rem] mb-[3rem]">
               <div className="flex flex-col lg:flex-row-reverse justify-between gap-[1rem] md:gap-[2rem]">
                 <div className="w-full lg:w-[45%]">
-                  <div className="flex justify-between items-center mb-[0.5rem]">
-                    <h1 className="font-bold text-[0.9rem] md:text-[1.2rem] text-[#c1121f]">
-                      {items.eventHeading}
-                    </h1>
-
-                    <h1 className="font-bold text-[0.7rem] md:text-[1.1rem] text-[#eb5e28]">
-                      {items.date || "Date not Provided!!"}
-                    </h1>
-                  </div>
-                  <p className="text-[0.7rem] md:text-[1rem] px-[1rem]">
-                    {items.eventDis}
-                  </p>
+                  <h1 className="font-bold text-[0.9rem] md:text-[1.2rem] text-[#c1121f]">
+                    {items.eventHeading}
+                  </h1>
                 </div>
 
                 {/* ----- Image Section ----- */}
@@ -52,6 +43,16 @@ export default function EventSection({
                       />
                     </div>
                   ))}
+                </div>
+
+                <div>
+                  <p className="text-[0.7rem] md:text-[1rem] mb-[0.5rem] px-[1rem]">
+                    {items.eventDis}
+                  </p>
+
+                  <h1 className="font-bold text-[0.7rem] md:text-[1.1rem] text-[#eb5e28] text-right">
+                    {items.date || "Date not Provided!!"}
+                  </h1>
                 </div>
               </div>
             </section>
