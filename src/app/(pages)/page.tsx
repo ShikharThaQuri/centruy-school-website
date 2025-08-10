@@ -1,8 +1,8 @@
 import Link from "next/link";
-import FirstSection from "../homeComponents/firstSection";
-import HeroSection from "../homeComponents/herosection";
-import ThirdTestimonialSection from "../homeComponents/thirdTestemonialSection";
-import SwiperGallery from "../homeComponents/swiperGallerySection";
+import HeroSection from "./homeComponents/herosection";
+import FirstSection from "./homeComponents/firstSection";
+import SwiperGallery from "./homeComponents/swiperGallerySection";
+import ThirdTestimonialSection from "./homeComponents/thirdTestemonialSection";
 
 export default function Home() {
   return (
