@@ -15,7 +15,7 @@ export default function AboutUsPage() {
           Our Staffs
         </h1>
 
-        <div className="mt-[7rem] grid gap-y-[7rem] grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 bg-transparant">
+        <div className="mt-[7rem] grid gap-x-[1.5rem] gap-y-[7rem] justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 bg-transparant">
           <Suspense fallback={<StaffLoading />}>
             <OurStaffSection />
           </Suspense>

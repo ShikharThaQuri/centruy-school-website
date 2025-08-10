@@ -13,7 +13,7 @@ export default function Navbar() {
   const [navIcon, isNavIcon] = useState<boolean>(false);
 
   return (
-    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-5rem] xl:mx-[-7.5rem]">
+    <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-7.5rem]">
       {/* --------- Hamburger Icon ---------- */}
       <div className="block md:hidden fixed top-[4.5rem] right-[1rem] z-[200]">
         {navIcon ? (

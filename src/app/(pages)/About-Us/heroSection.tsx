@@ -11,11 +11,11 @@ export default function Herosection() {
           alt="About Us"
           width={800}
           height={600}
-          className="max-w-full md:max-w-[25rem] max-h-[20rem] md:max-h-[25rem] object-cover object-center"
+          className="max-w-[15rem] md:max-w-[25rem] max-h-[15rem] md:max-h-[25rem] object-cover object-center"
         />
 
-        <div className="max-w-[40rem]">
-          <h1 className="text-xl md:text-3xl font-bold text-[#c1121f]">
+        <div className="max-w-[40rem] text-center md:text-left">
+          <h1 className="text-lg md:text-3xl font-bold text-[#c1121f]">
             Lokendra Chand ThaQuri
           </h1>
           <p className="text-[#ffbd00] ">Founder</p>
@@ -28,8 +28,8 @@ export default function Herosection() {
       </section>
 
       <section className="flex md:flex-row flex-col-reverse gap-[1.5rem] md:gap-[4rem] justify-between items-center  py-10">
-        <div className="max-w-[40rem]">
-          <h1 className="text-xl md:text-3xl font-bold text-[#c1121f]">
+        <div className="max-w-[40rem] text-center md:text-left">
+          <h1 className="text-lg md:text-3xl font-bold text-[#c1121f]">
             Aayush Chaudhary
           </h1>
           <p className="text-[#ffbd00] ">Principle</p>
@@ -44,7 +44,7 @@ export default function Herosection() {
           alt="About Us"
           width={800}
           height={600}
-          className="max-w-full md:max-w-[25rem] max-h-[20rem] md:max-h-[25rem]  object-cover object-center"
+          className="max-w-[15rem] md:max-w-[25rem] max-h-[15rem] md:max-h-[25rem]  object-cover object-center"
         />
       </section>
     </>

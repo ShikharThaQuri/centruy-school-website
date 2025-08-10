@@ -4,7 +4,7 @@ import photo2 from "@/images/photo2.jpeg";
 import photo3 from "@/images/School-cover-photo.jpg";
 
 const boxStyles =
-  "h-[24rem]  z-50 cursor-pointer w-[18rem] md:w-[30rem] 2xl:w-[30rem] lg:w-[20rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 hover:h-[24rem] hover:mt-[-4rem] transition-all duration-200 ";
+  "h-[20rem] md:h-[24rem]  z-50 cursor-pointer w-[18rem] md:w-[30rem] 2xl:w-[30rem] lg:w-[20rem] mt-[-3rem] mb-[3rem] rounded-lg shadow-xl/30 hover:h-[24rem] hover:mt-[-4rem] transition-all duration-200 ";
 
 export default function FirstSection() {
   return (

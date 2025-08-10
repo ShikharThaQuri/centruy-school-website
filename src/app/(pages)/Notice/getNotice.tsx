@@ -23,23 +23,20 @@ export default async function GetNotice() {
           {items.pin ? (
             <div key={i} className={`flex flex-col `}>
               <div className="p-4 bg-[#bb9457] rounded-lg shadow-md">
-                <h1 className="font-bold lg:text-[1.3rem]  text-[1.2rem] ">
+                <h1 className="lg:text-[1.2rem]  text-[1rem] ">
                   {items.noticeHeading}
                 </h1>
-                <p className=" mt-[0.5rem] xl:text-[1.1rem] md:text-[1rem] text-[0.9rem]">
-                  {items.noticeDis}
-                </p>
 
-                <div className="flex items-center justify-between mt-4">
+                <div className="flex items-center justify-between mt-1">
                   <div className="flex justify-end gap-5">
-                    <p className="text-[#d00000] font-bold xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
+                    <p className="text-[#d00000] xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
                       {new Date(`${items.createdAt}`) > currentDate
                         ? "New"
                         : ""}
                     </p>
                   </div>
 
-                  <h2 className="text-right text-white font-bold xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
+                  <h2 className="text-right text-white xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
                     {items.sliceDate}
                   </h2>
                 </div>
@@ -59,26 +56,20 @@ export default async function GetNotice() {
             ) : (
               <div key={i} className={`flex flex-col `}>
                 <div className="p-4 bg-[#bb9457] rounded-lg shadow-md mb-[1rem]">
-                  <h1 className="font-bold lg:text-[1.3rem] text-[1.2rem] ">
+                  <h1 className="lg:text-[1.2rem] text-[1rem] ">
                     {items.noticeHeading}
                   </h1>
-                  <p className="mt-[0.5rem] xl:text-[1.1rem] md:text-[1rem] text-[0.9rem]">
-                    {items.noticeDis}
-                  </p>
 
-                  <div className="flex items-center justify-between mt-4">
+                  <div className="flex items-center justify-between mt-1">
                     <div className="flex justify-end gap-5">
-                      <p className="text-[#d00000] font-bold text-[1.2rem]">
+                      <p className="text-[#d00000] text-[1.2rem]">
                         {currentDate < new Date(`${items.createdAt}`)
                           ? "New"
                           : ""}
                       </p>
-                      <p className="text-[#370617] font-bold  xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
-                        {items.pin ? "Pin" : ""}
-                      </p>
                     </div>
 
-                    <h2 className="text-right text-white font-bold lg:text-[1.1rem] xl:text-[1.2rem]  text-[0.9rem]">
+                    <h2 className="text-right text-white lg:text-[1.1rem] xl:text-[1.2rem]  text-[0.9rem]">
                       {items.sliceDate}
                     </h2>
                   </div>
