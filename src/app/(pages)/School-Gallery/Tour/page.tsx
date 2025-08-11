@@ -6,8 +6,8 @@ import EventLoading from "../eventLoading";
 export default function Tour() {
   return (
     <main className="py-[1rem] bg-[white] text-black">
-      <h1 className="font-bold text-[2rem] text-[blue] text-center mt-[1rem] mb-[2rem]">
-        SPORTS EVENTS
+      <h1 className="font-bold text-[1.5rem] md:text-[2rem] text-[#99582a] text-center mt-[1rem] mb-[2rem]">
+        Tours
       </h1>
 
       <Suspense fallback={<EventLoading />}>

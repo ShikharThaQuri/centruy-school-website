@@ -6,7 +6,7 @@ import EventLoading from "../eventLoading";
 export default function SportsEvent() {
   return (
     <main className=" py-[1rem] bg-[white] text-black">
-      <h1 className="font-bold text-[1.5rem] md:text-[2rem] text-[blue] text-center mt-[1rem] mb-[2rem]">
+      <h1 className="font-bold text-[1.5rem] md:text-[2rem] text-[#99582a] text-center mt-[1rem] mb-[2rem]">
         SPORTS EVENTS
       </h1>
 

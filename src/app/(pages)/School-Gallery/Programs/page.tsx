@@ -6,8 +6,8 @@ import EventLoading from "../eventLoading";
 export default function Programs() {
   return (
     <main className="py-[1rem] bg-[white] text-black">
-      <h1 className="font-bold text-[2rem] text-[blue] text-center mt-[1rem] mb-[2rem]">
-        SPORTS EVENTS
+      <h1 className="font-bold text-[1.5rem] md:text-[2rem] text-[#99582a] text-center mt-[1rem] mb-[2rem]">
+        Programs
       </h1>
 
       <Suspense fallback={<EventLoading />}>
