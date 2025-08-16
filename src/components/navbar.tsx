@@ -97,7 +97,7 @@ export default function Navbar() {
       <div
         className={`block md:hidden fixed top-0 left-0 right-0 z-[100] bg-[#252422] flex flex-col items-center justify-center gap-[1rem] font-bold ${
           navIcon ? "h-full" : "h-0"
-        }  transtion-all duration-800 text-white text-[1.3rem]`}
+        }  transtion-all duration-600 text-white text-[1.3rem]`}
       >
         <ul className="flex flex-col gap-[1rem] overflow-hidden">
           <li>

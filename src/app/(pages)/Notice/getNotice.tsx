@@ -23,20 +23,20 @@ export default async function GetNotice() {
           {items.pin ? (
             <div key={i} className={`flex flex-col `}>
               <div className="p-4 bg-[#bb9457] rounded-lg shadow-md">
-                <h1 className="lg:text-[1.2rem]  text-[1rem] ">
+                <h1 className="lg:text-[1.2rem] text-[0.8rem] ">
                   {items.noticeHeading}
                 </h1>
 
                 <div className="flex items-center justify-between mt-1">
                   <div className="flex justify-end gap-5">
-                    <p className="text-[#d00000] xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
+                    <p className="text-[#d00000] xl:text-[1.2rem] lg:text-[1.1rem] text-[0.6rem]">
                       {new Date(`${items.createdAt}`) > currentDate
                         ? "New"
                         : ""}
                     </p>
                   </div>
 
-                  <h2 className="text-right text-white xl:text-[1.2rem] lg:text-[1.1rem] text-[0.9rem]">
+                  <h2 className="text-right text-white xl:text-[1.2rem] lg:text-[1.1rem] text-[0.6rem]">
                     {items.sliceDate}
                   </h2>
                 </div>
@@ -56,20 +56,20 @@ export default async function GetNotice() {
             ) : (
               <div key={i} className={`flex flex-col `}>
                 <div className="p-4 bg-[#bb9457] rounded-lg shadow-md mb-[1rem]">
-                  <h1 className="lg:text-[1.2rem] text-[1rem] ">
+                  <h1 className="lg:text-[1.2rem] text-[0.8rem] ">
                     {items.noticeHeading}
                   </h1>
 
                   <div className="flex items-center justify-between mt-1">
                     <div className="flex justify-end gap-5">
-                      <p className="text-[#d00000] text-[1.2rem]">
+                      <p className="text-[#d00000] xl:text-[1.2rem] lg:text-[1.1rem] text-[0.6rem]">
                         {currentDate < new Date(`${items.createdAt}`)
                           ? "New"
                           : ""}
                       </p>
                     </div>
 
-                    <h2 className="text-right text-white lg:text-[1.1rem] xl:text-[1.2rem]  text-[0.9rem]">
+                    <h2 className="text-right text-white lg:text-[1.1rem] xl:text-[1.2rem]  text-[0.6rem]">
                       {items.sliceDate}
                     </h2>
                   </div>

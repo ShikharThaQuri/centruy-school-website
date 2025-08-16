@@ -53,7 +53,7 @@ export default function EventSection({
               </div>
 
               {/* Image Heading, Image dis and Image date section */}
-              <div className="w-full md:w-[50%] xl:w-[40%] flex flex-col p-3 ">
+              <div className="w-full md:w-[50%] xl:w-[40%] flex flex-col px-3 pt-3 ">
                 <h1 className="font-bold text-[0.9rem] md:text-[1.2rem] text-[#c1121f]">
                   {items.eventHeading}
                 </h1>
