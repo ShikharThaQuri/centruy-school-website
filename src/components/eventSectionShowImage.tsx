@@ -17,7 +17,7 @@ export default function EventSectionShowImage({
     <section
       className={`${
         popUp ? "" : "hidden"
-      } fixed top-0 bottom-0 left-0 right-0 bg-black fixed justify-center items-center text-white z-90 relatives`}
+      } fixed top-0 bottom-0 left-0 right-0 bg-black flex justify-center items-center text-white z-110 relatives`}
     >
       <Image
         src={imageUrl || items.Images[0].image_url}
@@ -27,7 +27,10 @@ export default function EventSectionShowImage({
         className="w-full h-[auto] object-cover object-center"
       />
 
-      <div className="absolute left-[1rem] right-[1rem] bottom-[1rem] z-20 flex items-center border p-[0.5rem] backdrop-blur-sm bg-white/30">
+      <div
+        className="absolute left-[1rem] right-[1rem] bottom-[1rem] z-20 
+      flex items-center border p-[0.5rem] backdrop-blur-sm bg-white/30 overflow-x-scroll"
+      >
         {items.Images.map((img, i) => (
           <Image
             key={i}
