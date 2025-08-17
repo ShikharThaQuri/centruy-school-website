@@ -1,6 +1,8 @@
+"use client";
+
 import { eventType } from "@/models/Gallery";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
 
 export default function EventSectionShowImage({
   items,
@@ -9,6 +11,8 @@ export default function EventSectionShowImage({
   items: eventType;
   popUp: boolean;
 }) {
+  const [imageUrl, setImageUrl] = useState<string>("");
+
   return (
     <section
       className={`${
@@ -16,7 +20,7 @@ export default function EventSectionShowImage({
       } fixed top-0 bottom-0 left-0 right-0 bg-black text-white z-90 relatives`}
     >
       <Image
-        src={items.Images[0].image_url}
+        src={imageUrl || items.Images[0].image_url}
         alt="Image"
         width={1000}
         height={500}
@@ -28,6 +32,7 @@ export default function EventSectionShowImage({
           <Image
             key={i}
             src={img.image_url}
+            onClick={() => setImageUrl(img.image_url)}
             alt="Image"
             width={400}
             height={200}

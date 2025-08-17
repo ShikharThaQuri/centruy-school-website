@@ -23,8 +23,6 @@ export default function EventSection({
   const [imagePopUpData, setImagePopUpData] = useState<eventType>();
   const [popUp, setPopUp] = useState<boolean>(false);
 
-  console.log(imagePopUpData);
-
   useEffect(() => {
     if (popUp) {
       document.body.style.overflow = "hidden";
