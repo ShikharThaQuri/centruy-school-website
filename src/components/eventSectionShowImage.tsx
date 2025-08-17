@@ -17,7 +17,7 @@ export default function EventSectionShowImage({
     <section
       className={`${
         popUp ? "" : "hidden"
-      } fixed top-0 bottom-0 left-0 right-0 bg-black text-white z-90 relatives`}
+      } fixed top-0 bottom-0 left-0 right-0 bg-black fixed justify-center items-center text-white z-90 relatives`}
     >
       <Image
         src={imageUrl || items.Images[0].image_url}
