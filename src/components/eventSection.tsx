@@ -5,6 +5,8 @@ import Image from "next/image";
 import EventSectionShowImage from "./eventSectionShowImage";
 import { useState } from "react";
 
+import CloseIcon from "@mui/icons-material/Close";
+
 type dataType = {
   success: boolean;
   data: eventType[];
@@ -21,16 +23,15 @@ export default function EventSection({
   const [imagePopUpData, setImagePopUpData] = useState<eventType>();
   const [popUp, setPopUp] = useState<boolean>(false);
 
-  console.log(popUp);
-
   return (
     <>
-      <button
-        onClick={() => setPopUp(false)}
-        className="fixed top-[1rem] right-[1rem] z-100 text-white"
-      >
-        Closed
-      </button>
+      {popUp && (
+        <CloseIcon
+          className="cursor-pointer text-[2.5rem] fixed top-[2rem] right-[2rem] z-100 text-white"
+          onClick={() => setPopUp(false)}
+        />
+      )}
+
       {result?.data?.map((items: eventType, i: number) => (
         <div key={i} className="mb-[2rem]">
           {items.type === type ? (
