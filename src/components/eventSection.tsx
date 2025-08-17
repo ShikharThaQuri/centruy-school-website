@@ -23,6 +23,8 @@ export default function EventSection({
   const [imagePopUpData, setImagePopUpData] = useState<eventType>();
   const [popUp, setPopUp] = useState<boolean>(false);
 
+  console.log(imagePopUpData);
+
   useEffect(() => {
     if (popUp) {
       document.body.style.overflow = "hidden";
@@ -46,6 +48,14 @@ export default function EventSection({
 
       {result?.data?.map((items: eventType, i: number) => (
         <div key={i} className="mb-[2rem]">
+          {imagePopUpData && popUp && (
+            <EventSectionShowImage
+              key={i}
+              items={imagePopUpData}
+              popUp={popUp}
+            />
+          )}
+
           {items.type === type ? (
             <section className="flex flex-col md:flex-row justify-between xl:justify-evenly gap-[0.5rem] bg-[#dda15e] rounded-lg shadow-lg p-3">
               {/* ---------------- Image Section ------------------- */}
@@ -53,14 +63,6 @@ export default function EventSection({
                 onClick={() => (setImagePopUpData(items), setPopUp(true))}
                 className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-y-3 py-3 pl-3 w-full md:w-[45%] relative rounded-lg bg-[#fdf0d5] z-50"
               >
-                {imagePopUpData && popUp && (
-                  <EventSectionShowImage
-                    key={i}
-                    items={imagePopUpData}
-                    popUp={popUp}
-                  />
-                )}
-
                 {/* Hover effect and button to show images and videos */}
                 <div className="cursor-pointer absolute top-0 bottom-0 left-0 right-0 backdrop-blur-sm bg-white/30 opacity-0 hover:opacity-100 duration-400 ease-in-out flex items-center justify-center">
                   <button className="cursor-pointer text-[#9a031e] font-bold text-[1.2rem]">
