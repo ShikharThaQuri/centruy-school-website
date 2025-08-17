@@ -3,7 +3,7 @@
 import { eventType } from "@/models/Gallery";
 import Image from "next/image";
 import EventSectionShowImage from "./eventSectionShowImage";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import CloseIcon from "@mui/icons-material/Close";
 
@@ -23,6 +23,18 @@ export default function EventSection({
   const [imagePopUpData, setImagePopUpData] = useState<eventType>();
   const [popUp, setPopUp] = useState<boolean>(false);
 
+  useEffect(() => {
+    if (popUp) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "auto";
+    }
+    // Clean up the style when the component unmounts or popUp changes
+    return () => {
+      document.body.style.overflow = "auto";
+    };
+  }, [popUp]);
+
   return (
     <>
       {popUp && (
@@ -39,7 +51,7 @@ export default function EventSection({
               {/* ---------------- Image Section ------------------- */}
               <div
                 onClick={() => (setImagePopUpData(items), setPopUp(true))}
-                className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-y-3 py-3 pl-3 w-full md:w-[45%] relative rounded-lg bg-[#fdf0d5]"
+                className="grid grid-flow-col grid-cols-2 grid-rows-2 gap-y-3 py-3 pl-3 w-full md:w-[45%] relative rounded-lg bg-[#fdf0d5] z-50"
               >
                 {imagePopUpData && popUp && (
                   <EventSectionShowImage
