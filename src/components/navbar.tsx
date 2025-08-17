@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav className="bg-[#faedcd] pt-8 pb-4 mx-[-4rem] md:mx-[-7.5rem]">
       {/* --------- Hamburger Icon ---------- */}
-      <div className="block md:hidden fixed top-[4.5rem] right-[1rem] z-[200]">
+      <div className="block md:hidden fixed top-[4.5rem] right-[1rem] z-[105]">
         {navIcon ? (
           <div className="px-[0.8rem] py-[0.8rem] rounded-full backdrop-blur-md bg-white/30">
             <CloseIcon
