@@ -17,31 +17,34 @@ export default function EventSectionShowImage({
     <section
       className={`${
         popUp ? "" : "hidden"
-      } fixed top-0 bottom-0 left-0 right-0 bg-black  text-white z-110 relatives`}
+      } fixed top-0 bottom-0 left-0 right-0 bg-black text-white z-110 relatives`}
     >
       {/* mobile view design!!! */}
-      <div className="md:hidden flex items-center snap-x snap-mandatory overflow-x-scroll w-full h-full">
+      <div className="md:hidden grid grid-flow-col grid-rows-1 items-center snap-x snap-mandatory overflow-x-scroll w-full h-auto">
         {items.Images.map((img, i) => (
-          <Image
-            key={i}
-            src={img.image_url}
-            alt="Image"
-            width={600}
-            height={200}
-            className={`w-full h-auto snap-start snap-always object-cover object-center`}
-          />
+          <div key={i} className="w-screen h-auto snap-center snap-always">
+            <Image
+              src={img.image_url}
+              alt="Image"
+              width={500}
+              height={500}
+              className="w-full h-full shrink-0"
+            />
+          </div>
         ))}
       </div>
 
       {/* other then mobile view design View!! */}
       <div className="hidden md:flex justify-center items-center">
-        <Image
-          src={imageUrl || items.Images[0].image_url}
-          alt="Image"
-          width={1000}
-          height={500}
-          className="w-full h-[auto] object-cover object-center"
-        />
+        <div className="w-screen h-auto snap-center snap-always">
+          <Image
+            src={imageUrl || items.Images[0].image_url}
+            alt="Image"
+            width={1000}
+            height={500}
+            className="w-full h-[auto] object-cover object-center"
+          />
+        </div>
 
         <div
           className="absolute left-[1rem] right-[1rem] bottom-[1rem] z-20 

@@ -39,7 +39,7 @@ export default function EventSection({
     <>
       {popUp && (
         <CloseIcon
-          className="cursor-pointer text-[2.5rem] fixed top-[2rem] right-[2rem] z-120 text-white"
+          className="cursor-pointer text-[2.5rem] fixed top-[2rem] right-[2rem] z-120 text-[#c1121f]"
           onClick={() => setPopUp(false)}
         />
       )}
