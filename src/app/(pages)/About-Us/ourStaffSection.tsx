@@ -18,7 +18,7 @@ export default async function OurStaffSection() {
       {result?.data?.map((items: TeacherType, i: number) => (
         <div
           key={i}
-          className="bg-[#b08968] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 w-[15rem] md:w-full"
+          className="bg-[#b08968] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 w-[15rem] md:w-full mr-[-4rem] md:mr-[-3rem]"
         >
           <Image
             src={items.image_Url}
