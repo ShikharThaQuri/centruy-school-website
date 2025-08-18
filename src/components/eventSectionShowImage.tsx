@@ -20,7 +20,7 @@ export default function EventSectionShowImage({
       } fixed top-0 bottom-0 left-0 right-0 bg-black text-white z-110 relatives`}
     >
       {/* mobile view design!!! */}
-      <div className="md:hidden grid grid-flow-col grid-rows-1 items-center snap-x snap-mandatory overflow-x-scroll w-full h-auto">
+      <div className="md:hidden grid grid-flow-col grid-rows-1 items-center snap-x snap-mandatory overflow-x-scroll w-full h-full">
         {items.Images.map((img, i) => (
           <div key={i} className="w-screen h-auto snap-center snap-always">
             <Image
@@ -35,20 +35,18 @@ export default function EventSectionShowImage({
       </div>
 
       {/* other then mobile view design View!! */}
-      <div className="hidden md:flex justify-center items-center">
-        <div className="w-screen h-auto snap-center snap-always">
-          <Image
-            src={imageUrl || items.Images[0].image_url}
-            alt="Image"
-            width={1000}
-            height={500}
-            className="w-full h-[auto] object-cover object-center"
-          />
-        </div>
+      <div className="hidden md:grid justify-center items-center w-full h-full">
+        <Image
+          src={imageUrl || items.Images[0].image_url}
+          alt="Image"
+          width={1000}
+          height={500}
+          className="w-auto h-screen object-cover object-center"
+        />
 
         <div
           className="absolute left-[1rem] right-[1rem] bottom-[1rem] z-20 
-      flex items-center border p-[0.5rem] backdrop-blur-sm bg-white/30 overflow-x-scroll"
+                    flex items-center border p-[0.5rem] backdrop-blur-sm bg-white/30 overflow-x-scroll"
         >
           {items.Images.map((img, i) => (
             <Image
