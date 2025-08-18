@@ -28,7 +28,7 @@ export default function EventSectionShowImage({
             alt="Image"
             width={500}
             height={200}
-            className={`w-full h-auto snap-start`}
+            className={`w-full h-auto snap-start snap-always object-cover object-center`}
           />
         ))}
       </div>
