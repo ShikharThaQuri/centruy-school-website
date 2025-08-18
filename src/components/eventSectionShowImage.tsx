@@ -26,7 +26,7 @@ export default function EventSectionShowImage({
             key={i}
             src={img.image_url}
             alt="Image"
-            width={500}
+            width={600}
             height={200}
             className={`w-full h-auto snap-start snap-always object-cover object-center`}
           />
