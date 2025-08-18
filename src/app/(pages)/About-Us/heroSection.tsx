@@ -1,6 +1,5 @@
 import Image from "next/image";
-import Image1 from "@/images/profile-6.jpg";
-import Image2 from "@/images/profile-7.jpg";
+import Image1 from "@/images/download.jpeg";
 
 export default function Herosection() {
   return (
@@ -18,7 +17,7 @@ export default function Herosection() {
           <h1 className="text-lg md:text-3xl font-bold text-[#c1121f]">
             Lokendra Chand ThaQuri
           </h1>
-          <p className="text-[#ffbd00] ">Founder</p>
+          <p className="text-[#c1121f] ">Founder</p>
           <p className="mt-4 text-[1rem] md:text-[1.2rem]">
             Welcome to our school! We are dedicated to providing a nurturing and
             inclusive environment for all students. Our mission is to foster
@@ -32,7 +31,7 @@ export default function Herosection() {
           <h1 className="text-lg md:text-3xl font-bold text-[#c1121f]">
             Aayush Chaudhary
           </h1>
-          <p className="text-[#ffbd00] ">Principle</p>
+          <p className="text-[#c1121f] ">Principle</p>
           <p className="mt-4 text-[1rem] md:text-[1.2rem]">
             Welcome to our school! We are dedicated to providing a nurturing and
             inclusive environment for all students. Our mission is to foster
@@ -40,7 +39,7 @@ export default function Herosection() {
           </p>
         </div>
         <Image
-          src={Image2}
+          src={Image1}
           alt="About Us"
           width={800}
           height={600}

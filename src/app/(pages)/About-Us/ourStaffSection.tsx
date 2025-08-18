@@ -18,21 +18,21 @@ export default async function OurStaffSection() {
       {result?.data?.map((items: TeacherType, i: number) => (
         <div
           key={i}
-          className="bg-[#bb9457] h-auto text-center rounded-lg shadow-xl/20 w-[15rem] md:w-full"
+          className="bg-[#b08968] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 w-[15rem] md:w-full"
         >
           <Image
             src={items.image_Url}
             alt="Staff"
-            width={800}
-            height={600}
-            className="w-[8rem] md:w-[10rem] h-[8rem] md:h-[10rem] mt-[-4rem] md:mt-[-5rem] rounded-[5rem] object-cover object-center mx-auto"
+            width={200}
+            height={200}
+            className="w-[5rem] md:w-[6rem] h-[5rem] md:h-[6rem] ml-[-4rem] md:ml-[-3rem] rounded-[5rem] object-cover object-center"
           />
 
-          <div className="py-4 px-2">
-            <h1 className="text-[1rem] md:text-[1.1rem] font-bold text-[#9d0208]">
+          <div className="py-[0.5rem] px-2 h-[4rem] md:h-[5rem] flex flex-col justify-start">
+            <h1 className="text-[0.9rem] md:text-[1rem] font-bold text-[#9d0208]">
               {items.teacherName}
             </h1>
-            <p className="text-gray-800 text-[0.9rem] md:text-[1rem]">
+            <p className="text-gray-800 text-[0.8rem] md:text-[1rem] ml-[0.5rem]">
               {items.teacherRole}
             </p>
           </div>
