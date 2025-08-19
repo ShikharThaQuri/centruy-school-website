@@ -68,8 +68,8 @@ export default function SwiperGallery() {
               items.Images[Math.floor(Math.random() * items.Images.length)]
                 ?.image_url
             }
-            width={900}
-            height={600}
+            width={400}
+            height={300}
             alt="Gallery Item 1"
             className="w-full h-[16rem] rounded-lg object-cover object-center"
           />

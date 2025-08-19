@@ -181,7 +181,7 @@ export default function Navbar() {
           className={`${
             inView ? "md:opacity-0 md:hidden" : ""
           }  md:flex items-center justify-between 
-          py-[1.5rem] px-[3rem] mx-[4rem] backdrop-blur-sm bg-white/30 rounded duration-150`}
+          py-[1.5rem] px-[3rem] mx-[4rem] backdrop-blur-sm bg-white/30 shadow-md rounded duration-150`}
         >
           <h1>LOGO</h1>
           <ul className="flex gap-[2rem]">

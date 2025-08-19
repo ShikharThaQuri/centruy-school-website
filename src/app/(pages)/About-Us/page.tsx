@@ -1,8 +1,6 @@
 import OurStaffSection from "./ourStaffSection";
 import MapSection from "./mapSection";
 import Herosection from "./heroSection";
-import { Suspense } from "react";
-import StaffLoading from "./staffLoading";
 
 export default function AboutUsPage() {
   return (
@@ -15,10 +13,11 @@ export default function AboutUsPage() {
           Our Staffs
         </h1>
 
-        <div className="mt-[7rem] grid gap-x-[4rem] gap-y-[4rem] justify-items-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-transparant">
-          <Suspense fallback={<StaffLoading />}>
-            <OurStaffSection />
-          </Suspense>
+        <div
+          className="mt-[7rem] mb-[4rem] grid gap-x-[4rem] gap-y-[4rem] justify-items-center 
+        grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-transparant relative"
+        >
+          <OurStaffSection />
         </div>
       </section>
     </main>
