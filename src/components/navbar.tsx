@@ -13,9 +13,8 @@ export default function Navbar() {
 
   const [navIcon, isNavIcon] = useState<boolean>(false);
 
-  const { ref, inView, entry } = useInView({
+  const { ref, inView } = useInView({
     threshold: 0,
-    triggerOnce: false,
   });
 
   return (
@@ -41,12 +40,15 @@ export default function Navbar() {
         </div>
 
         {/* ---------- Nav Heading ----------- */}
-        <div ref={ref} className="text-center px-[3rem] text-white">
+        <div className="text-center px-[3rem] text-white">
           <h1 className="text-[1rem] md:text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
             CENTURY EDUCATION ACADEMY SCHOOL
           </h1>
 
-          <h3 className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#07617E]">
+          <h3
+            ref={ref}
+            className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#07617E]"
+          >
             Kohalpur 3, Banke
           </h3>
         </div>
@@ -173,17 +175,16 @@ export default function Navbar() {
 
       {/* --------- glass effect navbar links -------------- */}
       <div
-        className={`fixed top-[0.5rem] w-full 2xl:text-[1.2rem] text-[1rem]  text-black font-bold hidden md:inline z-100
-          `}
+        className={`fixed top-[0.5rem] w-full 2xl:text-[1.2rem] text-[1rem]  text-black font-bold hidden md:inline z-100`}
       >
         <div
           className={`${
-            inView ? "md:opacity-0" : ""
+            inView ? "md:opacity-0 md:hidden" : ""
           }  md:flex items-center justify-between 
           py-[1.5rem] px-[3rem] mx-[4rem] backdrop-blur-sm bg-white/30 rounded duration-150`}
         >
           <h1>LOGO</h1>
-          <ul ref={ref} className="flex gap-[2rem]">
+          <ul className="flex gap-[2rem]">
             <li>
               <Link
                 href="/"
