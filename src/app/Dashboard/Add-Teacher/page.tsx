@@ -49,7 +49,6 @@ export default function AddTeacher() {
             <textarea
               rows={4}
               name="Quote"
-              required
               placeholder="Enter Teacher Quote"
               className={`${inputStyle}`}
             />
