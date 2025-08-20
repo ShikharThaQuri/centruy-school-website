@@ -40,15 +40,12 @@ export default function Navbar() {
         </div>
 
         {/* ---------- Nav Heading ----------- */}
-        <div className="text-center px-[3rem] text-white">
+        <div ref={ref} className="text-center px-[3rem] text-white">
           <h1 className="text-[1rem] md:text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
             CENTURY EDUCATION ACADEMY SCHOOL
           </h1>
 
-          <h3
-            ref={ref}
-            className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#07617E]"
-          >
+          <h3 className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#07617E]">
             Kohalpur 3, Banke
           </h3>
         </div>
@@ -61,7 +58,7 @@ export default function Navbar() {
                    px-[4rem] pt-[1rem] md:px-[5rem] xl:px-[7.5rem] text-black font-bold hidden duration-150`}
         >
           <h1>LOGO</h1>
-          <ul ref={ref} className="flex gap-[2rem]">
+          <ul className="flex gap-[2rem]">
             <li>
               <Link
                 href="/"

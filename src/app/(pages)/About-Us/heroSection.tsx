@@ -4,7 +4,7 @@ import Image1 from "@/images/download.jpeg";
 export default function Herosection() {
   return (
     <>
-      <section className="flex md:flex-row flex-col gap-[1rem] md:gap-[4rem] justify-between items-center py-15">
+      <section className="flex lg:flex-row flex-col gap-[1rem] md:gap-[4rem] justify-between items-center py-15">
         <Image
           src={Image1}
           alt="About Us"
@@ -13,7 +13,7 @@ export default function Herosection() {
           className="max-w-[15rem] md:max-w-[25rem] max-h-[15rem] md:max-h-[25rem] object-cover object-center"
         />
 
-        <div className="max-w-[40rem] text-center md:text-left">
+        <div className="max-w-[40rem] text-center lg:text-left">
           <h1 className="text-lg md:text-3xl font-bold text-[#c1121f]">
             Lokendra Chand ThaQuri
           </h1>
@@ -26,8 +26,8 @@ export default function Herosection() {
         </div>
       </section>
 
-      <section className="flex md:flex-row flex-col-reverse gap-[1.5rem] md:gap-[4rem] justify-between items-center  py-10">
-        <div className="max-w-[40rem] text-center md:text-left">
+      <section className="flex lg:flex-row flex-col-reverse gap-[1.5rem] md:gap-[4rem] justify-between items-center  py-10">
+        <div className="max-w-[40rem] text-center lg:text-left">
           <h1 className="text-lg md:text-3xl font-bold text-[#c1121f]">
             Aayush Chaudhary
           </h1>
