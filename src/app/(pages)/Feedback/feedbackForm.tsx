@@ -24,7 +24,7 @@ export default function FeedbackForm() {
     event.preventDefault();
 
     if (!terrible && !bad && !okey && !good && !excellent) {
-      setErrorMsg("You must select a emoji avobe before Submit!!");
+      setErrorMsg("You must select a emoji before Submit!!");
       return;
     }
 

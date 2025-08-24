@@ -106,7 +106,7 @@ export default function OurStaffSection() {
         onClick={() => (show ? setShow(false) : setShow(true))}
         className="cursor-pointer px-[1rem] py-[0.8rem] bg-[#f3722c] text-[] absolute bottom-[-4rem] ml-[3rem] md:ml-[2rem]"
       >
-        View More
+        {show ? "Show Less" : "View More"}
       </button>
     </>
   );
