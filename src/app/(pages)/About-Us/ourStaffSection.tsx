@@ -52,7 +52,7 @@ export default function OurStaffSection() {
             // ---------------- Show All Staffs
             <div
               key={i}
-              className="bg-[#a68a64] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 "
+              className="bg-[#a68a64] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 mb-[2rem] md:mb-[4rem]"
             >
               <Image
                 src={items.image_Url}
@@ -77,7 +77,7 @@ export default function OurStaffSection() {
               {i < 4 && (
                 <div
                   key={i}
-                  className="bg-[#a68a64] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 "
+                  className="bg-[#a68a64] flex justify-start items-center h-[4rem] md:h-[5rem] rounded-r-lg shadow-xl/20 mb-[2rem] md:mb-[4rem]"
                 >
                   <Image
                     src={items.image_Url}

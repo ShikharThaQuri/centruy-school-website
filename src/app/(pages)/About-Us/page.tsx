@@ -14,7 +14,7 @@ export default function AboutUsPage() {
         </h1>
 
         <div
-          className="mt-[7rem] mb-[4rem] grid gap-x-[4rem] gap-y-[4rem] justify-items-center 
+          className="mt-[7rem] mb-[4rem] grid gap-x-[4rem] justify-items-center 
         grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 bg-transparant relative"
         >
           <OurStaffSection />
