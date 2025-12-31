@@ -1,33 +1,33 @@
 import connectDB from "@/db/connect";
-import Notice from "@/models/Notice";
+import Blog from "@/models/Blog";
 
 export async function POST(req: Request) {
   try {
     await connectDB();
 
-    const Body = await req.json();
+    const body = await req.json();
 
     const date = new Date();
-    const sliceDate = date.toString().substring(0, 16);
+    const sliceDate = date.toString().substring(0, 15);
 
-    const newNotice = new Notice({
-      noticeHeading: Body?.noticeHeading,
-      noticeDis: Body?.noticeDis,
-      pin: Body?.pin,
+    const newBlog = new Blog({
+      title: body?.title,
+      content: body?.content,
+      writterName: body?.writterName,
       sliceDate: sliceDate,
     });
 
-    const result = await newNotice.save();
+    const result = await newBlog.save();
 
     return Response.json({
+      msg: "Successfully added a new Blog!",
       success: true,
-      msg: "successfully added a Notice",
       data: result,
     });
   } catch (error) {
     return Response.json({
+      msg: "Something went wrong while posting Blog!",
       success: false,
-      msg: "Something went wrong while adding Notice!!",
       error,
     });
   }
@@ -37,17 +37,17 @@ export async function GET() {
   try {
     await connectDB();
 
-    const result = await Notice.find({}).sort({ createdAt: -1 });
+    const blogs = await Blog.find().sort({ createdAt: -1 });
 
     return Response.json({
+      msg: "Successfully fetched all Blogs!",
       success: true,
-      msg: "Successfull in getting Notice",
-      data: result,
+      data: blogs,
     });
   } catch (error) {
     return Response.json({
+      msg: "Something went wrong while posting Blog!",
       success: false,
-      msg: "Something went wrong while getting Notice!!",
       error,
     });
   }
@@ -59,17 +59,19 @@ export async function DELETE(req: Request) {
 
     const body = await req.json();
 
-    const result = await Notice.findByIdAndDelete({ _id: body._id });
+    console.log(body, "hello world");
+
+    const result = await Blog.findByIdAndDelete({ _id: body._id });
 
     return Response.json({
       success: true,
-      msg: "Successfully delete a Notice.",
+      msg: "Successfully delete a blogs.",
       result,
     });
   } catch (error) {
     return Response.json({
+      msg: "Something went wrong while posting Blog!",
       success: false,
-      msg: "Something went wrong while deleting Notice!!",
       error,
     });
   }

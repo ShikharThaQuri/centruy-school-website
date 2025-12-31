@@ -49,6 +49,19 @@ export default function DashHomeNavbar() {
             Gallery
           </Link>
         </li>
+
+        <li>
+          <Link
+            href={"/Dashboard/Home/BLOG"}
+            className={`${linkBoxStyle} ${
+              pathname === "/Dashboard/Home/BLOG"
+                ? "bg-[#386641]"
+                : "bg-[#a7c957]"
+            }`}
+          >
+            Blog
+          </Link>
+        </li>
       </ul>
     </div>
   );

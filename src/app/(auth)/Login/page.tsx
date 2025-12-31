@@ -5,7 +5,7 @@ import { redirect } from "next/navigation";
 import { useActionState } from "react";
 
 export default function Login() {
-  const [data, action] = useActionState(loginUser, undefined);
+  const [data, action, isPending] = useActionState(loginUser, undefined);
 
   if (data?.success == true) {
     redirect("/Dashboard/Home");
@@ -46,9 +46,10 @@ export default function Login() {
           </div>
           <button
             type="submit"
+            disabled={isPending}
             className="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 transition duration-200"
           >
-            Login
+            {isPending ? "Logging in..." : "Login"}
           </button>
         </form>
 

@@ -39,43 +39,63 @@ export default function DashboardNavbar() {
       </div>
 
       <div className="pl-[2rem] pt-[5rem] fixed top-0 bottom-0 left-0 bg-[#D9D9D9] z-50 hidden md:block">
-        <h1
-          className={`${
-            pathname === "/Dashboard/Home" ? "bg-[#BC6C25]" : "bg-[#DDA15E]"
-          } ${sideDesign}`}
-        >
-          <Link href="/Dashboard/Home">Dashboard Home</Link>
-        </h1>
+        <Link href="/Dashboard/Home">
+          <h1
+            className={`${
+              pathname === "/Dashboard/Home" ? "bg-[#BC6C25]" : "bg-[#DDA15E]"
+            } ${sideDesign}`}
+          >
+            Dashboard Home
+          </h1>
+        </Link>
 
-        <h1
-          className={`${
-            pathname === "/Dashboard/Add-Notice"
-              ? "bg-[#BC6C25]"
-              : "bg-[#DDA15E]"
-          } ${sideDesign}`}
-        >
-          <Link href="/Dashboard/Add-Notice">Add Notice</Link>
-        </h1>
+        <Link href="/Dashboard/Add-Notice">
+          <h1
+            className={`${
+              pathname === "/Dashboard/Add-Notice"
+                ? "bg-[#BC6C25]"
+                : "bg-[#DDA15E]"
+            } ${sideDesign}`}
+          >
+            Add Notice
+          </h1>
+        </Link>
 
-        <h1
-          className={`${
-            pathname === "/Dashboard/Add-Teacher"
-              ? "bg-[#BC6C25]"
-              : "bg-[#DDA15E]"
-          } ${sideDesign}`}
-        >
-          <Link href="/Dashboard/Add-Teacher">Add Teacher</Link>
-        </h1>
+        <Link href="/Dashboard/Add-Teacher">
+          <h1
+            className={`${
+              pathname === "/Dashboard/Add-Teacher"
+                ? "bg-[#BC6C25]"
+                : "bg-[#DDA15E]"
+            } ${sideDesign}`}
+          >
+            Add Teacher
+          </h1>
+        </Link>
 
-        <h1
-          className={`${
-            pathname === "/Dashboard/Add-Gallery"
-              ? "bg-[#BC6C25]"
-              : "bg-[#DDA15E]"
-          } ${sideDesign}`}
-        >
-          <Link href="/Dashboard/Add-Gallery">Add Gallery</Link>
-        </h1>
+        <Link href="/Dashboard/Add-Gallery">
+          <h1
+            className={`${
+              pathname === "/Dashboard/Add-Gallery"
+                ? "bg-[#BC6C25]"
+                : "bg-[#DDA15E]"
+            } ${sideDesign}`}
+          >
+            Add Gallery
+          </h1>
+        </Link>
+
+        <Link href="/Dashboard/Add-Blog">
+          <h1
+            className={`${
+              pathname === "/Dashboard/Add-Blog"
+                ? "bg-[#BC6C25]"
+                : "bg-[#DDA15E]"
+            } ${sideDesign}`}
+          >
+            Add Blog
+          </h1>
+        </Link>
       </div>
 
       <div

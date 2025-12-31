@@ -74,7 +74,7 @@ export async function GET() {
   try {
     await connectDB();
 
-    const result = await Event.find({}).sort({ _id: -1 });
+    const result = await Event.find({}).sort({ createdAt: -1 });
 
     return Response.json({
       success: true,

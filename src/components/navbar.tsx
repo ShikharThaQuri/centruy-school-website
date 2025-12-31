@@ -19,7 +19,7 @@ export default function Navbar() {
 
   return (
     <main className="mx-[-4rem] md:mx-[-7.5rem]">
-      <nav className={`bg-[#faedcd] pt-8 pb-4 `}>
+      <nav className={`bg-[#0096C7] pt-8 pb-4 `}>
         {/* --------- Hamburger Icon ---------- */}
         <div className="block md:hidden fixed top-[4.5rem] right-[1rem] z-[105]">
           {navIcon ? (
@@ -41,11 +41,11 @@ export default function Navbar() {
 
         {/* ---------- Nav Heading ----------- */}
         <div ref={ref} className="text-center px-[3rem] text-white">
-          <h1 className="text-[1rem] md:text-[1.5rem] xl:text-[1.7rem] font-bold text-[#0096C7] ">
+          <h1 className="text-[1rem] md:text-[1.5rem] xl:text-[1.7rem] font-bold text-inherit ">
             CENTURY EDUCATION ACADEMY SCHOOL
           </h1>
 
-          <h3 className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#07617E]">
+          <h3 className="text-[0.8rem] 2xl:text-[1.5rem] font-bold text-[#edf6f9]">
             Kohalpur 3, Banke
           </h3>
         </div>
@@ -62,26 +62,16 @@ export default function Navbar() {
             <li>
               <Link
                 href="/"
-                className={`${pathname === "/" ? "text-[#c1121f]" : ""}`}
+                className={`${pathname === "/" ? "text-[#d00000]" : ""}`}
               >
                 Home
               </Link>
             </li>
             <li>
               <Link
-                href="/About-Us"
-                className={`${
-                  pathname === "/About-Us" ? "text-[#c1121f]" : ""
-                }`}
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
                 href="/School-Gallery"
                 className={`${
-                  pathname === "/School-Gallery" ? "text-[#c1121f]" : ""
+                  pathname === "/School-Gallery" ? "text-[#d00000]" : ""
                 }`}
               >
                 School Gallery
@@ -89,17 +79,35 @@ export default function Navbar() {
             </li>
             <li>
               <Link
+                href="/Blog"
+                className={`${pathname === "/Blog" ? "text-[#d00000]" : ""}`}
+              >
+                Blog
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/Notice"
-                className={`${pathname === "/Notice" ? "text-[#c1121f]" : ""}`}
+                className={`${pathname === "/Notice" ? "text-[#d00000]" : ""}`}
               >
                 Notice
               </Link>
             </li>
             <li>
               <Link
+                href="/About-Us"
+                className={`${
+                  pathname === "/About-Us" ? "text-[#d00000]" : ""
+                }`}
+              >
+                About Us
+              </Link>
+            </li>
+            <li>
+              <Link
                 href="/Feedback"
                 className={`${
-                  pathname === "/Feedback" ? "text-[#c1121f]" : ""
+                  pathname === "/Feedback" ? "text-[#d00000]" : ""
                 }`}
               >
                 Feedback

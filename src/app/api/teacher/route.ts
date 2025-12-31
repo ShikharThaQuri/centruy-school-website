@@ -50,7 +50,7 @@ export async function GET() {
   try {
     await connectDB();
 
-    const result = await Teacher.find({});
+    const result = await Teacher.find({}).sort({ createdAt: -1 });
 
     return Response.json({
       success: true,
